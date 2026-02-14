@@ -1,0 +1,133 @@
+.section {
+  width: 100%;
+  background: #ffffff;
+  padding: 5.7rem 0;
+}
+
+.divider {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 0 var(--layout-padding);
+}
+
+.dividerLine {
+  border-top: 1px solid var(--color-border);
+}
+
+.container {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 0 var(--layout-padding);
+}
+
+.header {
+  margin-bottom: 2.25rem;
+}
+
+.title {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: clamp(1.85rem, 2.7vw, 2.2rem);
+}
+
+.subtitle {
+  margin: 0.45rem 0 0;
+  color: var(--color-secondary);
+  font-weight: 500;
+}
+
+.content {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) minmax(0, 0.9fr);
+  gap: clamp(1.25rem, 3vw, 3.4rem);
+}
+
+.narrative {
+  border-left: 2px solid var(--color-accent);
+  padding-left: 1rem;
+  margin: 0;
+  color: var(--color-secondary);
+  line-height: 1.72;
+}
+
+.principles {
+  margin-top: 1.4rem;
+  display: grid;
+  gap: 0.8rem;
+}
+
+.principleCard {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: #f8fafc;
+  padding: 0.95rem;
+}
+
+.principleTitle {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 0.89rem;
+}
+
+.principleText {
+  margin: 0.45rem 0 0;
+  color: var(--color-secondary);
+  font-size: 0.86rem;
+  line-height: 1.58;
+}
+
+.modelCard {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 1.05rem;
+  box-shadow: var(--shadow-soft);
+  position: sticky;
+  top: calc(var(--header-height) + 1.2rem);
+  align-self: start;
+}
+
+.modelTitle {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 1.02rem;
+}
+
+.modelList {
+  margin: 0.95rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.7rem;
+}
+
+.modelItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.58rem;
+  color: var(--color-secondary);
+  line-height: 1.54;
+  font-size: 0.86rem;
+}
+
+.modelIcon {
+  margin-top: 0.2rem;
+  font-size: 0.66rem;
+  color: var(--color-accent);
+}
+
+@media (max-width: 1023px) {
+  .content {
+    grid-template-columns: 1fr;
+  }
+
+  .modelCard {
+    position: static;
+  }
+}
+
+@media (max-width: 680px) {
+  .section {
+    padding: 4.1rem 0;
+  }
+}

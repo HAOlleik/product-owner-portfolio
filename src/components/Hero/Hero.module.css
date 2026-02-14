@@ -1,0 +1,196 @@
+.section {
+  width: min(1440px, 100%);
+  margin: 0 auto;
+  padding: 5.2rem var(--layout-padding);
+  display: grid;
+  grid-template-columns: minmax(0, 1.15fr) minmax(0, 0.9fr);
+  gap: clamp(2rem, 4.2vw, 5rem);
+  background: linear-gradient(180deg, #f8fafc 0%, #f8fafc 68%, #ffffff 100%);
+}
+
+.content {
+  position: relative;
+}
+
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  background: #ffffff;
+  color: var(--color-primary);
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+  text-transform: uppercase;
+  font-weight: 600;
+  padding: 0.42rem 0.58rem;
+  margin-bottom: 2rem;
+}
+
+.title {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: clamp(2rem, 4vw, 3.15rem);
+  line-height: 1.15;
+  letter-spacing: -0.03em;
+}
+
+.subtitle {
+  margin: 1.25rem 0 0;
+  color: var(--color-secondary);
+  font-size: clamp(1rem, 2vw, 1.16rem);
+  line-height: 1.7;
+  max-width: 58ch;
+}
+
+.highlightList {
+  margin: 1.7rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 0.72rem 1rem;
+}
+
+.highlightItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.56rem;
+  color: var(--color-secondary);
+}
+
+.highlightDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+  margin-top: 0.55rem;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}
+
+.highlightText {
+  line-height: 1.5;
+  font-weight: 500;
+}
+
+.support {
+  margin: 1.45rem 0 0;
+  padding-left: 0.9rem;
+  border-left: 2px solid var(--color-border);
+  color: color-mix(in srgb, var(--color-secondary) 74%, white);
+  line-height: 1.65;
+  max-width: 58ch;
+}
+
+.actions {
+  margin-top: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.7rem;
+}
+
+.primaryButton,
+.secondaryButton {
+  border-radius: 10px;
+  padding: 0.68rem 1.25rem;
+  font-size: 0.86rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.primaryButton {
+  border: 1px solid var(--color-primary);
+  background: var(--color-primary);
+  color: #ffffff;
+}
+
+.secondaryButton {
+  border: 1px solid var(--color-border-dark);
+  background: #ffffff;
+  color: var(--color-primary);
+}
+
+.primaryButton:hover,
+.primaryButton:focus-visible {
+  background: #1e293b;
+}
+
+.secondaryButton:hover,
+.secondaryButton:focus-visible {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.primaryButton:focus-visible,
+.secondaryButton:focus-visible {
+  outline: 2px solid rgba(20, 184, 166, 0.33);
+  outline-offset: 2px;
+}
+
+.flow {
+  display: grid;
+  gap: 1rem;
+  align-self: start;
+  padding-top: 0.5rem;
+}
+
+.flowNode {
+  position: relative;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 1rem 1.05rem;
+  box-shadow: var(--shadow-soft);
+}
+
+.flowLabel {
+  margin: 0;
+  color: var(--color-accent);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  font-size: 0.67rem;
+  font-weight: 700;
+}
+
+.flowDescription {
+  margin: 0.35rem 0 0;
+  color: var(--color-secondary);
+  line-height: 1.58;
+  font-size: 0.86rem;
+}
+
+.flowChevron {
+  position: absolute;
+  left: 50%;
+  bottom: -0.98rem;
+  transform: translateX(-50%);
+  color: #cbd5e1;
+  font-size: 0.65rem;
+}
+
+@media (max-width: 1023px) {
+  .section {
+    grid-template-columns: 1fr;
+    padding-top: 3.5rem;
+  }
+
+  .highlightList {
+    grid-template-columns: 1fr;
+  }
+
+  .flow {
+    padding-top: 0;
+  }
+}
+
+@media (max-width: 640px) {
+  .actions {
+    flex-direction: column;
+  }
+
+  .primaryButton,
+  .secondaryButton {
+    width: 100%;
+  }
+}

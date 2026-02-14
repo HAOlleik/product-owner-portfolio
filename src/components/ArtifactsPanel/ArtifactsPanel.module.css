@@ -1,0 +1,104 @@
+.panel {
+  margin-bottom: 1.45rem;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+.toggle {
+  width: 100%;
+  border: 0;
+  background: #ffffff;
+  color: var(--color-primary);
+  font-weight: 600;
+  font-size: 0.88rem;
+  text-align: left;
+  padding: 0.76rem 0.95rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  cursor: pointer;
+}
+
+.toggle:hover,
+.toggle:focus-visible {
+  background: #f8fafc;
+}
+
+.toggle:focus-visible {
+  outline: 2px solid rgba(20, 184, 166, 0.35);
+  outline-offset: -2px;
+}
+
+.count {
+  color: var(--color-secondary);
+  font-weight: 500;
+}
+
+.chevron {
+  color: var(--color-secondary);
+  transition: transform 160ms ease;
+}
+
+.chevronOpen {
+  transform: rotate(180deg);
+}
+
+.list {
+  list-style: none;
+  margin: 0;
+  padding: 0.3rem 0.95rem 0.9rem;
+  display: grid;
+  gap: 0.6rem;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 1fr auto;
+  gap: 0.8rem;
+  align-items: center;
+  border: 1px solid var(--color-border);
+  border-radius: 10px;
+  padding: 0.7rem;
+}
+
+.itemTitle {
+  font-size: 0.86rem;
+  color: var(--color-primary);
+  font-weight: 600;
+}
+
+.itemDescription {
+  margin: 0.25rem 0 0;
+  font-size: 0.78rem;
+  color: var(--color-secondary);
+}
+
+.viewButton {
+  border: 1px solid var(--color-border);
+  background: #ffffff;
+  color: var(--color-primary);
+  padding: 0.42rem 0.72rem;
+  font-size: 0.78rem;
+  border-radius: 8px;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.viewButton:hover,
+.viewButton:focus-visible {
+  border-color: var(--color-accent);
+  color: var(--color-accent);
+}
+
+.viewButton:focus-visible {
+  outline: 2px solid rgba(20, 184, 166, 0.36);
+  outline-offset: 2px;
+}
+
+@media (max-width: 640px) {
+  .item {
+    grid-template-columns: 1fr;
+  }
+}

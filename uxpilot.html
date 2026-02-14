@@ -1,0 +1,1924 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    />
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Product Owner Portfolio - AI Knowledge Copilot Case Study</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      window.FontAwesomeConfig = { autoReplaceSvg: "nest" };
+      tailwind.config = {
+        theme: {
+          extend: {
+            colors: {
+              primary: "#0F172A",
+              accent: "#14B8A6",
+              secondary: "#475569",
+              bgLight: "#F8FAFC",
+              cardBorder: "#E2E8F0",
+              surface: "#FFFFFF",
+            },
+            fontFamily: {
+              sans: [
+                "Inter",
+                "ui-sans-serif",
+                "system-ui",
+                "-apple-system",
+                "BlinkMacSystemFont",
+                "Segoe UI",
+                "Roboto",
+                "Helvetica Neue",
+                "Arial",
+                "sans-serif",
+              ],
+            },
+            boxShadow: {
+              soft: "0 2px 8px -2px rgba(15, 23, 42, 0.08)",
+              card: "0 4px 12px -4px rgba(0,0,0,0.08)",
+            },
+          },
+        },
+      };
+    </script>
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
+      rel="stylesheet"
+    />
+    <script
+      src="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/js/all.min.js"
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    ></script>
+    <style>
+      body {
+        font-family: "Inter", sans-serif;
+        -webkit-font-smoothing: antialiased;
+      }
+      ::-webkit-scrollbar {
+        width: 8px;
+      }
+      ::-webkit-scrollbar-track {
+        background: #f8fafc;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #cbd5e1;
+        border-radius: 4px;
+      }
+      ::-webkit-scrollbar-thumb:hover {
+        background: #94a3b8;
+      }
+    </style>
+  </head>
+  <body class="bg-bgLight text-primary min-h-screen flex flex-col">
+    <!-- Header / Navigation -->
+    <header
+      id="header"
+      class="fixed w-full top-0 z-50 transition-all duration-300 bg-white/95 backdrop-blur-sm border-b border-gray-200"
+    >
+      <div
+        class="max-w-[1440px] mx-auto px-12 h-20 flex items-center justify-between"
+      >
+        <a href="#" class="flex items-center gap-2 group">
+          <div
+            class="w-8 h-8 rounded bg-primary text-white flex items-center justify-center text-sm font-bold"
+          >
+            PO
+          </div>
+          <span class="text-base font-semibold tracking-tight text-primary"
+            >Case Study: AI Copilot</span
+          >
+        </a>
+
+        <nav class="hidden md:flex items-center space-x-8">
+          <a
+            href="#hero"
+            class="text-sm font-medium text-primary hover:text-accent transition-colors"
+            >Overview</a
+          >
+          <a
+            href="#structure"
+            class="text-sm font-medium text-secondary hover:text-accent transition-colors"
+            >Framework</a
+          >
+        </nav>
+
+        <div class="flex items-center gap-4">
+          <button class="md:hidden text-primary hover:text-accent p-2">
+            <i class="fa-solid fa-bars text-xl"></i>
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- Add sticky navigation after header -->
+    <nav
+      id="case-study-nav"
+      class="fixed top-20 left-0 w-64 h-[calc(100vh-5rem)] bg-white border-r border-gray-200 z-40 hidden lg:block overflow-y-auto"
+    >
+      <div class="p-6">
+        <div
+          class="text-xs font-bold tracking-widest text-secondary mb-6 uppercase"
+        >
+          Case Study Navigation
+        </div>
+        <ul class="space-y-1">
+          <li>
+            <a
+              href="#hero"
+              class="nav-link active flex items-center gap-3 px-3 py-2 rounded text-sm font-medium text-primary hover:bg-gray-50 transition-colors"
+              ><span class="text-xs text-secondary w-6">00</span
+              ><span>Overview</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#philosophy"
+              class="nav-link flex items-center gap-3 px-3 py-2 rounded text-sm font-medium text-secondary hover:text-primary hover:bg-gray-50 transition-colors"
+              ><span class="text-xs text-secondary w-6">00</span
+              ><span>Product Philosophy</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#vision"
+              class="nav-link flex items-center gap-3 px-3 py-2 rounded text-sm font-medium text-secondary hover:text-primary hover:bg-gray-50 transition-colors"
+              ><span class="text-xs text-secondary w-6">01</span
+              ><span>Vision</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#goals"
+              class="nav-link flex items-center gap-3 px-3 py-2 rounded text-sm font-medium text-secondary hover:text-primary hover:bg-gray-50 transition-colors"
+              ><span class="text-xs text-secondary w-6">02</span
+              ><span>Goals</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#personas"
+              class="nav-link flex items-center gap-3 px-3 py-2 rounded text-sm font-medium text-secondary hover:text-primary hover:bg-gray-50 transition-colors"
+              ><span class="text-xs text-secondary w-6">03</span
+              ><span>Personas</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#assumptions"
+              class="nav-link flex items-center gap-3 px-3 py-2 rounded text-sm font-medium text-secondary hover:text-primary hover:bg-gray-50 transition-colors"
+              ><span class="text-xs text-secondary w-6">04</span
+              ><span>Assumptions & Risks</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#journey"
+              class="nav-link flex items-center gap-3 px-3 py-2 rounded text-sm font-medium text-secondary hover:text-primary hover:bg-gray-50 transition-colors"
+              ><span class="text-xs text-secondary w-6">05</span
+              ><span>Core Journey</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#storymap"
+              class="nav-link flex items-center gap-3 px-3 py-2 rounded text-sm font-medium text-secondary hover:text-primary hover:bg-gray-50 transition-colors"
+              ><span class="text-xs text-secondary w-6">06</span
+              ><span>Story Map & MVP</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#stories"
+              class="nav-link flex items-center gap-3 px-3 py-2 rounded text-sm font-medium text-secondary hover:text-primary hover:bg-gray-50 transition-colors"
+              ><span class="text-xs text-secondary w-6">07</span
+              ><span>User Stories</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#traceability"
+              class="nav-link flex items-center gap-3 px-3 py-2 rounded text-sm font-medium text-secondary hover:text-primary hover:bg-gray-50 transition-colors"
+              ><span class="text-xs text-secondary w-6">08</span
+              ><span>Traceability</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#reflection"
+              class="nav-link flex items-center gap-3 px-3 py-2 rounded text-sm font-medium text-secondary hover:text-primary hover:bg-gray-50 transition-colors"
+              ><span class="text-xs text-secondary w-6">09</span
+              ><span>Reflection</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </nav>
+
+    <!-- Mobile navigation dropdown -->
+    <div
+      id="mobile-nav-dropdown"
+      class="lg:hidden fixed top-20 left-0 right-0 bg-white border-b border-gray-200 z-40"
+    >
+      <button
+        id="mobile-nav-toggle"
+        class="w-full px-6 py-4 flex items-center justify-between text-left"
+      >
+        <span class="text-sm font-semibold text-primary"
+          >Case Study Navigation</span
+        >
+        <i class="fa-solid fa-chevron-down text-secondary"></i>
+      </button>
+      <div
+        id="mobile-nav-content"
+        class="hidden border-t border-gray-100 max-h-96 overflow-y-auto"
+      >
+        <ul class="p-4 space-y-1">
+          <li>
+            <a
+              href="#hero"
+              class="mobile-nav-link active flex items-center gap-3 px-3 py-2 rounded text-sm font-medium text-primary hover:bg-gray-50"
+              ><span class="text-xs text-secondary w-6">00</span
+              ><span>Overview</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#philosophy"
+              class="mobile-nav-link flex items-center gap-3 px-3 py-2 rounded text-sm font-medium text-secondary hover:text-primary hover:bg-gray-50"
+              ><span class="text-xs text-secondary w-6">00</span
+              ><span>Product Philosophy</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#vision"
+              class="mobile-nav-link flex items-center gap-3 px-3 py-2 rounded text-sm font-medium text-secondary hover:text-primary hover:bg-gray-50"
+              ><span class="text-xs text-secondary w-6">01</span
+              ><span>Vision</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#goals"
+              class="mobile-nav-link flex items-center gap-3 px-3 py-2 rounded text-sm font-medium text-secondary hover:text-primary hover:bg-gray-50"
+              ><span class="text-xs text-secondary w-6">02</span
+              ><span>Goals</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#personas"
+              class="mobile-nav-link flex items-center gap-3 px-3 py-2 rounded text-sm font-medium text-secondary hover:text-primary hover:bg-gray-50"
+              ><span class="text-xs text-secondary w-6">03</span
+              ><span>Personas</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#assumptions"
+              class="mobile-nav-link flex items-center gap-3 px-3 py-2 rounded text-sm font-medium text-secondary hover:text-primary hover:bg-gray-50"
+              ><span class="text-xs text-secondary w-6">04</span
+              ><span>Assumptions & Risks</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#journey"
+              class="mobile-nav-link flex items-center gap-3 px-3 py-2 rounded text-sm font-medium text-secondary hover:text-primary hover:bg-gray-50"
+              ><span class="text-xs text-secondary w-6">05</span
+              ><span>Core Journey</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#storymap"
+              class="mobile-nav-link flex items-center gap-3 px-3 py-2 rounded text-sm font-medium text-secondary hover:text-primary hover:bg-gray-50"
+              ><span class="text-xs text-secondary w-6">06</span
+              ><span>Story Map & MVP</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#stories"
+              class="mobile-nav-link flex items-center gap-3 px-3 py-2 rounded text-sm font-medium text-secondary hover:text-primary hover:bg-gray-50"
+              ><span class="text-xs text-secondary w-6">07</span
+              ><span>User Stories</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#traceability"
+              class="mobile-nav-link flex items-center gap-3 px-3 py-2 rounded text-sm font-medium text-secondary hover:text-primary hover:bg-gray-50"
+              ><span class="text-xs text-secondary w-6">08</span
+              ><span>Traceability</span></a
+            >
+          </li>
+          <li>
+            <a
+              href="#reflection"
+              class="mobile-nav-link flex items-center gap-3 px-3 py-2 rounded text-sm font-medium text-secondary hover:text-primary hover:bg-gray-50"
+              ><span class="text-xs text-secondary w-6">09</span
+              ><span>Reflection</span></a
+            >
+          </li>
+        </ul>
+      </div>
+    </div>
+
+    <main class="flex-grow pt-20 lg:pl-64">
+      <!-- 1️⃣ HERO SECTION -->
+      <section
+        id="hero"
+        class="relative w-full max-w-[1440px] mx-auto px-12 py-24 flex items-start gap-20 overflow-hidden"
+      >
+        <!-- Left Column: Content (55%) -->
+        <div class="w-[55%] flex flex-col items-start z-10">
+          <!-- Label -->
+          <div
+            class="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-gray-100 border border-gray-200 mb-10"
+          >
+            <span
+              class="text-xs font-semibold tracking-wide text-primary uppercase"
+              >Product Owner Portfolio</span
+            >
+          </div>
+
+          <!-- Main Headline -->
+          <h1
+            class="text-5xl font-bold text-primary leading-[1.15] mb-8 tracking-tight"
+          >
+            AI Knowledge Copilot<br />
+            A Strategic End-to-End Product<br />
+            Ownership Case Study
+          </h1>
+
+          <!-- Subheadline -->
+          <p
+            class="text-lg text-secondary leading-relaxed max-w-2xl mb-10 font-medium"
+          >
+            A disciplined product journey focused on measurable impact,
+            validated decision-making, and structured prioritization.
+          </p>
+
+          <!-- Bullet Highlights -->
+          <ul class="grid grid-cols-2 gap-x-12 gap-y-4 mb-8 w-full max-w-2xl">
+            <li class="flex items-start gap-3 text-secondary">
+              <i class="fa-solid fa-circle text-accent text-[6px] mt-2"></i>
+              <span class="font-medium">Vision-Driven Strategy</span>
+            </li>
+            <li class="flex items-start gap-3 text-secondary">
+              <i class="fa-solid fa-circle text-accent text-[6px] mt-2"></i>
+              <span class="font-medium">User-Centered Discovery</span>
+            </li>
+            <li class="flex items-start gap-3 text-secondary">
+              <i class="fa-solid fa-circle text-accent text-[6px] mt-2"></i>
+              <span class="font-medium"
+                >Structured Backlog & Story Mapping</span
+              >
+            </li>
+            <li class="flex items-start gap-3 text-secondary">
+              <i class="fa-solid fa-circle text-accent text-[6px] mt-2"></i>
+              <span class="font-medium">Measurable Product Goals</span>
+            </li>
+          </ul>
+
+          <!-- Supporting Text -->
+          <p
+            class="text-sm text-secondary/70 mb-12 max-w-xl border-l-2 border-gray-200 pl-4"
+          >
+            A structured exploration of strategy, discovery, prioritization, and
+            execution.
+          </p>
+
+          <!-- Buttons -->
+          <div class="flex gap-4">
+            <button
+              class="px-8 py-3 bg-primary text-white text-sm font-semibold rounded hover:bg-gray-800 transition-all duration-200"
+            >
+              View Case Study
+            </button>
+            <button
+              class="px-8 py-3 bg-white text-primary border border-gray-300 text-sm font-semibold rounded hover:border-accent hover:text-accent transition-all duration-200"
+            >
+              Product Philosophy
+            </button>
+          </div>
+        </div>
+
+        <!-- Right Column: Process Flow Diagram (45%) -->
+        <div class="w-[45%] relative z-10 pt-8">
+          <div class="flex flex-col gap-6">
+            <!-- Flow Node 1: Vision -->
+            <div
+              class="relative bg-white rounded-lg border border-gray-200 p-5 shadow-soft"
+            >
+              <div
+                class="text-xs font-bold tracking-widest text-accent mb-2 uppercase"
+              >
+                Vision
+              </div>
+              <p class="text-sm text-secondary leading-relaxed">
+                Strategic problem framing & measurable goals
+              </p>
+              <div
+                class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-gray-300"
+              >
+                <i class="fa-solid fa-chevron-down text-sm"></i>
+              </div>
+            </div>
+
+            <!-- Flow Node 2: Research -->
+            <div
+              class="relative bg-white rounded-lg border border-gray-200 p-5 shadow-soft"
+            >
+              <div
+                class="text-xs font-bold tracking-widest text-accent mb-2 uppercase"
+              >
+                Research
+              </div>
+              <p class="text-sm text-secondary leading-relaxed">
+                User interviews, persona validation, pain identification
+              </p>
+              <div
+                class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-gray-300"
+              >
+                <i class="fa-solid fa-chevron-down text-sm"></i>
+              </div>
+            </div>
+
+            <!-- Flow Node 3: Mapping -->
+            <div
+              class="relative bg-white rounded-lg border border-gray-200 p-5 shadow-soft"
+            >
+              <div
+                class="text-xs font-bold tracking-widest text-accent mb-2 uppercase"
+              >
+                Mapping
+              </div>
+              <p class="text-sm text-secondary leading-relaxed">
+                Story mapping & MVP slicing
+              </p>
+              <div
+                class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-gray-300"
+              >
+                <i class="fa-solid fa-chevron-down text-sm"></i>
+              </div>
+            </div>
+
+            <!-- Flow Node 4: Backlog -->
+            <div
+              class="relative bg-white rounded-lg border border-gray-200 p-5 shadow-soft"
+            >
+              <div
+                class="text-xs font-bold tracking-widest text-accent mb-2 uppercase"
+              >
+                Backlog
+              </div>
+              <p class="text-sm text-secondary leading-relaxed">
+                INVEST-aligned stories & traceability
+              </p>
+              <div
+                class="absolute -bottom-4 left-1/2 transform -translate-x-1/2 text-gray-300"
+              >
+                <i class="fa-solid fa-chevron-down text-sm"></i>
+              </div>
+            </div>
+
+            <!-- Flow Node 5: Outcome -->
+            <div
+              class="bg-white rounded-lg border border-gray-200 p-5 shadow-soft"
+            >
+              <div
+                class="text-xs font-bold tracking-widest text-accent mb-2 uppercase"
+              >
+                Outcome
+              </div>
+              <p class="text-sm text-secondary leading-relaxed">
+                Impact metrics & validation
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Document Divider -->
+      <div class="w-full max-w-[1440px] mx-auto px-12">
+        <div class="border-t border-gray-200"></div>
+      </div>
+
+      <!-- PRODUCT PHILOSOPHY SECTION -->
+      <section id="philosophy" class="w-full bg-white py-24">
+        <div class="max-w-[1440px] mx-auto px-12">
+          <!-- Section Header -->
+          <div class="max-w-3xl mb-16">
+            <h2 class="text-3xl font-bold text-primary mb-3">
+              Product Philosophy
+            </h2>
+            <p class="text-base text-secondary font-medium">
+              How I work as a Product Owner (operating model)
+            </p>
+          </div>
+
+          <!-- 2-Column Layout -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-16">
+            <!-- Left Column: Narrative + Principles -->
+            <div class="space-y-8">
+              <!-- Intro Paragraph -->
+              <div class="border-l-2 border-accent pl-6">
+                <p class="text-base text-secondary leading-relaxed">
+                  I treat product ownership as value maximization through
+                  clarity, alignment, and disciplined decisions. Artifacts exist
+                  to support decisions—not to create documentation.
+                </p>
+              </div>
+
+              <!-- Principles Grid -->
+              <div class="grid grid-cols-1 gap-6 mt-10">
+                <!-- Principle 1 -->
+                <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                  <h4 class="text-sm font-bold text-primary mb-2">
+                    Vision → Backlog Alignment
+                  </h4>
+                  <p class="text-sm text-secondary leading-relaxed">
+                    Every backlog item traces to a product goal.
+                  </p>
+                </div>
+
+                <!-- Principle 2 -->
+                <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                  <h4 class="text-sm font-bold text-primary mb-2">
+                    Conversation-First Requirements
+                  </h4>
+                  <p class="text-sm text-secondary leading-relaxed">
+                    Stories are placeholders for collaboration, refined through
+                    discussion.
+                  </p>
+                </div>
+
+                <!-- Principle 3 -->
+                <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                  <h4 class="text-sm font-bold text-primary mb-2">
+                    Outcomes Over Output
+                  </h4>
+                  <p class="text-sm text-secondary leading-relaxed">
+                    We measure impact, not delivery volume.
+                  </p>
+                </div>
+
+                <!-- Principle 4 -->
+                <div class="bg-gray-50 rounded-lg p-6 border border-gray-200">
+                  <h4 class="text-sm font-bold text-primary mb-2">
+                    Progressive Refinement
+                  </h4>
+                  <p class="text-sm text-secondary leading-relaxed">
+                    Details increase as work nears delivery; we avoid upfront
+                    over-specification.
+                  </p>
+                </div>
+              </div>
+            </div>
+
+            <!-- Right Column: Operating Model Card -->
+            <div>
+              <div
+                class="bg-white rounded-lg border border-gray-200 p-8 shadow-soft sticky top-32"
+              >
+                <h3 class="text-lg font-bold text-primary mb-6">
+                  Operating Model (What I do repeatedly)
+                </h3>
+                <ul class="space-y-4">
+                  <li class="flex items-start gap-3">
+                    <div
+                      class="w-5 h-5 rounded-full border-2 border-accent flex items-center justify-center mt-0.5 flex-shrink-0"
+                    >
+                      <i class="fa-solid fa-check text-accent text-[10px]"></i>
+                    </div>
+                    <span class="text-sm text-secondary leading-relaxed"
+                      >Define Product Goal + measurable outcomes</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div
+                      class="w-5 h-5 rounded-full border-2 border-accent flex items-center justify-center mt-0.5 flex-shrink-0"
+                    >
+                      <i class="fa-solid fa-check text-accent text-[10px]"></i>
+                    </div>
+                    <span class="text-sm text-secondary leading-relaxed"
+                      >Validate assumptions early (risk-first)</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div
+                      class="w-5 h-5 rounded-full border-2 border-accent flex items-center justify-center mt-0.5 flex-shrink-0"
+                    >
+                      <i class="fa-solid fa-check text-accent text-[10px]"></i>
+                    </div>
+                    <span class="text-sm text-secondary leading-relaxed"
+                      >Use story mapping to slice MVP</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div
+                      class="w-5 h-5 rounded-full border-2 border-accent flex items-center justify-center mt-0.5 flex-shrink-0"
+                    >
+                      <i class="fa-solid fa-check text-accent text-[10px]"></i>
+                    </div>
+                    <span class="text-sm text-secondary leading-relaxed"
+                      >Maintain an ordered backlog (iceberg-shaped
+                      refinement)</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div
+                      class="w-5 h-5 rounded-full border-2 border-accent flex items-center justify-center mt-0.5 flex-shrink-0"
+                    >
+                      <i class="fa-solid fa-check text-accent text-[10px]"></i>
+                    </div>
+                    <span class="text-sm text-secondary leading-relaxed"
+                      >Write INVEST-quality stories with clear acceptance
+                      criteria</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-3">
+                    <div
+                      class="w-5 h-5 rounded-full border-2 border-accent flex items-center justify-center mt-0.5 flex-shrink-0"
+                    >
+                      <i class="fa-solid fa-check text-accent text-[10px]"></i>
+                    </div>
+                    <span class="text-sm text-secondary leading-relaxed"
+                      >Facilitate stakeholder trade-offs transparently</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Document Divider -->
+      <div class="w-full max-w-[1440px] mx-auto px-12">
+        <div class="border-t border-gray-200"></div>
+      </div>
+
+      <!-- 2️⃣ STRUCTURE SECTION -->
+      <section id="structure" class="w-full bg-white py-24">
+        <div class="max-w-[1440px] mx-auto px-12">
+          <!-- Centered Headline -->
+          <div class="text-center max-w-2xl mx-auto mb-20">
+            <h2 class="text-3xl font-bold text-primary mb-3">
+              How This Case Study Is Structured
+            </h2>
+            <div class="w-12 h-0.5 bg-accent mx-auto"></div>
+          </div>
+
+          <!-- 4 Cards Grid -->
+          <div class="grid grid-cols-4 gap-8">
+            <!-- Card 1 -->
+            <div
+              class="relative bg-white rounded-lg p-6 border border-gray-200 hover:border-gray-300 transition-all duration-200 flex flex-col items-start h-full overflow-hidden"
+            >
+              <div
+                class="absolute -top-4 -right-4 text-[120px] font-bold text-gray-50 leading-none select-none"
+              >
+                01
+              </div>
+              <div class="relative z-10">
+                <div
+                  class="text-[10px] font-bold tracking-widest text-accent mb-4 uppercase"
+                >
+                  Step 1
+                </div>
+                <div
+                  class="w-10 h-10 rounded bg-blue-50 text-blue-600 flex items-center justify-center text-lg mb-5"
+                >
+                  <i class="fa-regular fa-compass"></i>
+                </div>
+                <h3 class="text-base font-bold text-primary mb-3">
+                  Vision & Goals
+                </h3>
+                <p class="text-sm text-secondary leading-relaxed">
+                  Defined strategic problem framing and measurable success
+                  criteria before solution design.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 2 -->
+            <div
+              class="relative bg-white rounded-lg p-6 border border-gray-200 hover:border-gray-300 transition-all duration-200 flex flex-col items-start h-full overflow-hidden"
+            >
+              <div
+                class="absolute -top-4 -right-4 text-[120px] font-bold text-gray-50 leading-none select-none"
+              >
+                02
+              </div>
+              <div class="relative z-10">
+                <div
+                  class="text-[10px] font-bold tracking-widest text-accent mb-4 uppercase"
+                >
+                  Step 2
+                </div>
+                <div
+                  class="w-10 h-10 rounded bg-purple-50 text-purple-600 flex items-center justify-center text-lg mb-5"
+                >
+                  <i class="fa-regular fa-user"></i>
+                </div>
+                <h3 class="text-base font-bold text-primary mb-3">
+                  User Research & Personas
+                </h3>
+                <p class="text-sm text-secondary leading-relaxed">
+                  Validated assumptions through structured discovery and
+                  real-user insight.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 3 -->
+            <div
+              class="relative bg-white rounded-lg p-6 border border-gray-200 hover:border-gray-300 transition-all duration-200 flex flex-col items-start h-full overflow-hidden"
+            >
+              <div
+                class="absolute -top-4 -right-4 text-[120px] font-bold text-gray-50 leading-none select-none"
+              >
+                03
+              </div>
+              <div class="relative z-10">
+                <div
+                  class="text-[10px] font-bold tracking-widest text-accent mb-4 uppercase"
+                >
+                  Step 3
+                </div>
+                <div
+                  class="w-10 h-10 rounded bg-orange-50 text-orange-600 flex items-center justify-center text-lg mb-5"
+                >
+                  <i class="fa-solid fa-list-check"></i>
+                </div>
+                <h3 class="text-base font-bold text-primary mb-3">
+                  Story Mapping & MVP
+                </h3>
+                <p class="text-sm text-secondary leading-relaxed">
+                  Prioritized high-impact features using user journey mapping
+                  and value slicing.
+                </p>
+              </div>
+            </div>
+
+            <!-- Card 4 -->
+            <div
+              class="relative bg-white rounded-lg p-6 border border-gray-200 hover:border-gray-300 transition-all duration-200 flex flex-col items-start h-full overflow-hidden"
+            >
+              <div
+                class="absolute -top-4 -right-4 text-[120px] font-bold text-gray-50 leading-none select-none"
+              >
+                04
+              </div>
+              <div class="relative z-10">
+                <div
+                  class="text-[10px] font-bold tracking-widest text-accent mb-4 uppercase"
+                >
+                  Step 4
+                </div>
+                <div
+                  class="w-10 h-10 rounded bg-teal-50 text-teal-600 flex items-center justify-center text-lg mb-5"
+                >
+                  <i class="fa-solid fa-code-branch"></i>
+                </div>
+                <h3 class="text-base font-bold text-primary mb-3">
+                  Backlog Strategy
+                </h3>
+                <p class="text-sm text-secondary leading-relaxed">
+                  Translated requirements into ready-for-dev tickets with clear
+                  acceptance criteria and outcome traceability.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Empty State / Continuation Hint -->
+          <div class="mt-16 text-center">
+            <p class="text-sm text-gray-400 italic">
+              Scroll down to begin the journey...
+            </p>
+            <div class="mt-4 animate-bounce text-gray-300">
+              <i class="fa-solid fa-chevron-down"></i>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Document Divider -->
+      <div class="w-full max-w-[1440px] mx-auto px-12">
+        <div class="border-t border-gray-200"></div>
+      </div>
+
+      <!-- SECTION 01 — Strategic Vision -->
+      <section id="vision" class="w-full bg-white py-24">
+        <div class="max-w-[1440px] mx-auto px-12">
+          <h2 class="text-4xl font-bold text-primary mb-16">
+            01 — Strategic Vision
+          </h2>
+
+          <!-- Problem Context -->
+          <div class="mb-16">
+            <h3 class="text-xl font-bold text-primary mb-6">Problem Context</h3>
+            <div class="max-w-4xl">
+              <p class="text-base text-secondary leading-relaxed mb-4">
+                SaaS support teams face a critical inefficiency: agents spend
+                40-60% of their time searching for answers across fragmented
+                knowledge bases, Slack threads, and documentation systems. This
+                results in inconsistent responses, longer handling times, and
+                decreased customer satisfaction.
+              </p>
+              <p class="text-base text-secondary leading-relaxed">
+                The cost extends beyond time—it impacts agent confidence,
+                customer trust, and operational scalability. As knowledge grows,
+                the problem compounds exponentially.
+              </p>
+            </div>
+          </div>
+
+          <!-- Product Vision Statement -->
+          <div class="mb-16">
+            <h3 class="text-xl font-bold text-primary mb-6">
+              Product Vision Statement
+            </h3>
+            <div
+              class="bg-gray-50 border-l-4 border-accent p-8 max-w-4xl rounded-lg"
+            >
+              <p
+                class="text-lg text-primary leading-relaxed font-medium italic"
+              >
+                "Enable support agents to deliver accurate, consistent answers
+                in seconds—not minutes—by surfacing contextually relevant
+                knowledge with transparent AI-powered search and cited sources."
+              </p>
+            </div>
+          </div>
+
+          <!-- Strategic Intent -->
+          <div>
+            <h3 class="text-xl font-bold text-primary mb-6">
+              Strategic Intent
+            </h3>
+            <div class="grid grid-cols-3 gap-8 max-w-5xl">
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <div
+                  class="text-xs font-bold tracking-widest text-accent mb-3 uppercase"
+                >
+                  Business Impact
+                </div>
+                <ul class="space-y-2 text-sm text-secondary">
+                  <li class="flex items-start gap-2">
+                    <i
+                      class="fa-solid fa-circle text-[4px] mt-2 text-accent"
+                    ></i>
+                    <span
+                      >Reduce operational costs through efficiency gains</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i
+                      class="fa-solid fa-circle text-[4px] mt-2 text-accent"
+                    ></i>
+                    <span
+                      >Scale support without proportional headcount growth</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i
+                      class="fa-solid fa-circle text-[4px] mt-2 text-accent"
+                    ></i>
+                    <span>Improve customer satisfaction metrics</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <div
+                  class="text-xs font-bold tracking-widest text-accent mb-3 uppercase"
+                >
+                  User Value
+                </div>
+                <ul class="space-y-2 text-sm text-secondary">
+                  <li class="flex items-start gap-2">
+                    <i
+                      class="fa-solid fa-circle text-[4px] mt-2 text-accent"
+                    ></i>
+                    <span>Eliminate search frustration and cognitive load</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i
+                      class="fa-solid fa-circle text-[4px] mt-2 text-accent"
+                    ></i>
+                    <span>Increase agent confidence in responses</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i
+                      class="fa-solid fa-circle text-[4px] mt-2 text-accent"
+                    ></i>
+                    <span
+                      >Enable faster resolution and higher quality answers</span
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="bg-white border border-gray-200 rounded-lg p-6">
+                <div
+                  class="text-xs font-bold tracking-widest text-accent mb-3 uppercase"
+                >
+                  Long-Term Strategy
+                </div>
+                <ul class="space-y-2 text-sm text-secondary">
+                  <li class="flex items-start gap-2">
+                    <i
+                      class="fa-solid fa-circle text-[4px] mt-2 text-accent"
+                    ></i>
+                    <span
+                      >Build foundation for self-service customer portal</span
+                    >
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i
+                      class="fa-solid fa-circle text-[4px] mt-2 text-accent"
+                    ></i>
+                    <span>Create data layer for continuous learning</span>
+                  </li>
+                  <li class="flex items-start gap-2">
+                    <i
+                      class="fa-solid fa-circle text-[4px] mt-2 text-accent"
+                    ></i>
+                    <span
+                      >Establish competitive differentiation in support
+                      quality</span
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Document Divider -->
+      <div class="w-full max-w-[1440px] mx-auto px-12">
+        <div class="border-t border-gray-200"></div>
+      </div>
+
+      <!-- SECTION 02 — Product Goals -->
+      <section id="goals" class="w-full bg-white py-24">
+        <div class="max-w-[1440px] mx-auto px-12">
+          <h2 class="text-4xl font-bold text-primary mb-16">
+            02 — Measurable Product Goals
+          </h2>
+
+          <!-- KPI Grid -->
+          <div class="grid grid-cols-4 gap-6 mb-12">
+            <div
+              class="bg-white border border-gray-200 rounded-lg p-8 text-center"
+            >
+              <div class="text-4xl font-bold text-accent mb-3">30-40%</div>
+              <div
+                class="text-xs font-bold tracking-widest text-primary mb-2 uppercase"
+              >
+                Reduction Target
+              </div>
+              <p class="text-sm text-secondary">
+                Average Handling Time per ticket
+              </p>
+            </div>
+            <div
+              class="bg-white border border-gray-200 rounded-lg p-8 text-center"
+            >
+              <div class="text-4xl font-bold text-accent mb-3">10-20%</div>
+              <div
+                class="text-xs font-bold tracking-widest text-primary mb-2 uppercase"
+              >
+                Increase Target
+              </div>
+              <p class="text-sm text-secondary">
+                First Contact Resolution rate
+              </p>
+            </div>
+            <div
+              class="bg-white border border-gray-200 rounded-lg p-8 text-center"
+            >
+              <div class="text-4xl font-bold text-accent mb-3">15%</div>
+              <div
+                class="text-xs font-bold tracking-widest text-primary mb-2 uppercase"
+              >
+                Reduction Target
+              </div>
+              <p class="text-sm text-secondary">Ticket Reopen Rate</p>
+            </div>
+            <div
+              class="bg-white border border-gray-200 rounded-lg p-8 text-center"
+            >
+              <div class="text-4xl font-bold text-accent mb-3">+25%</div>
+              <div
+                class="text-xs font-bold tracking-widest text-primary mb-2 uppercase"
+              >
+                Improvement Target
+              </div>
+              <p class="text-sm text-secondary">Agent Confidence Score</p>
+            </div>
+          </div>
+
+          <!-- Explanation -->
+          <div
+            class="max-w-4xl bg-gray-50 border border-gray-200 rounded-lg p-8"
+          >
+            <h3 class="text-sm font-bold text-primary mb-4">
+              How Metrics Influenced Prioritization
+            </h3>
+            <p class="text-sm text-secondary leading-relaxed">
+              These metrics directly shaped feature prioritization decisions.
+              Features that reduced search time received highest priority,
+              followed by those that increased answer accuracy and transparency.
+              The MVP focused exclusively on the "search-to-answer" flow—the
+              highest-impact lever for all four metrics. Secondary features like
+              analytics dashboards and bulk knowledge updates were deferred to
+              post-MVP releases.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Document Divider -->
+      <div class="w-full max-w-[1440px] mx-auto px-12">
+        <div class="border-t border-gray-200"></div>
+      </div>
+
+      <!-- SECTION 03 — Personas -->
+      <section id="personas" class="w-full bg-white py-24">
+        <div class="max-w-[1440px] mx-auto px-12">
+          <h2 class="text-4xl font-bold text-primary mb-16">
+            03 — User Research & Personas
+          </h2>
+
+          <!-- Persona Cards -->
+          <div class="grid grid-cols-2 gap-8 mb-12">
+            <div class="bg-white border border-gray-200 rounded-lg p-8">
+              <div class="flex items-start gap-4 mb-6">
+                <div
+                  class="w-16 h-16 rounded-full bg-blue-50 flex items-center justify-center text-2xl text-blue-600"
+                >
+                  <i class="fa-solid fa-headset"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-primary">Support Agent</h3>
+                  <p class="text-sm text-secondary">Primary User</p>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <div
+                    class="text-xs font-bold tracking-widest text-accent mb-2 uppercase"
+                  >
+                    Core Needs
+                  </div>
+                  <ul class="space-y-1 text-sm text-secondary">
+                    <li>• Fast, accurate answers during live conversations</li>
+                    <li>• Confidence in AI-suggested responses</li>
+                    <li>• Transparent source attribution</li>
+                  </ul>
+                </div>
+                <div>
+                  <div
+                    class="text-xs font-bold tracking-widest text-accent mb-2 uppercase"
+                  >
+                    Pain Points
+                  </div>
+                  <ul class="space-y-1 text-sm text-secondary">
+                    <li>• 40-60% of time spent searching for answers</li>
+                    <li>• Inconsistent information across sources</li>
+                    <li>• Fear of providing incorrect information</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+            <div class="bg-white border border-gray-200 rounded-lg p-8">
+              <div class="flex items-start gap-4 mb-6">
+                <div
+                  class="w-16 h-16 rounded-full bg-purple-50 flex items-center justify-center text-2xl text-purple-600"
+                >
+                  <i class="fa-solid fa-user-tie"></i>
+                </div>
+                <div>
+                  <h3 class="text-lg font-bold text-primary">Support Lead</h3>
+                  <p class="text-sm text-secondary">Secondary User</p>
+                </div>
+              </div>
+              <div class="space-y-4">
+                <div>
+                  <div
+                    class="text-xs font-bold tracking-widest text-accent mb-2 uppercase"
+                  >
+                    Core Needs
+                  </div>
+                  <ul class="space-y-1 text-sm text-secondary">
+                    <li>• Visibility into team performance metrics</li>
+                    <li>• Identify knowledge gaps systematically</li>
+                    <li>• Improve onboarding efficiency</li>
+                  </ul>
+                </div>
+                <div>
+                  <div
+                    class="text-xs font-bold tracking-widest text-accent mb-2 uppercase"
+                  >
+                    Pain Points
+                  </div>
+                  <ul class="space-y-1 text-sm text-secondary">
+                    <li>• Difficult to measure knowledge effectiveness</li>
+                    <li>• No systematic way to update outdated content</li>
+                    <li>• Training new agents takes too long</li>
+                  </ul>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Insights Summary -->
+          <div
+            class="max-w-4xl bg-gray-50 border-l-4 border-accent p-8 rounded-lg"
+          >
+            <h3 class="text-sm font-bold text-primary mb-4">
+              Key Behavioral Insights
+            </h3>
+            <ul class="space-y-3 text-sm text-secondary">
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle text-accent text-[6px] mt-2"></i>
+                <span
+                  ><strong>Search time is the bottleneck:</strong> Agents lose
+                  momentum and customer rapport while hunting for answers</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle text-accent text-[6px] mt-2"></i>
+                <span
+                  ><strong>Trust is critical:</strong> Agents won't use AI
+                  suggestions without transparent source citations</span
+                >
+              </li>
+              <li class="flex items-start gap-3">
+                <i class="fa-solid fa-circle text-accent text-[6px] mt-2"></i>
+                <span
+                  ><strong>AI must be transparent:</strong> "Black box"
+                  recommendations create anxiety rather than confidence</span
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
+      </section>
+
+      <!-- Document Divider -->
+      <div class="w-full max-w-[1440px] mx-auto px-12">
+        <div class="border-t border-gray-200"></div>
+      </div>
+
+      <!-- SECTION 04 — Assumptions & Risks -->
+      <section id="assumptions" class="w-full bg-white py-24">
+        <div class="max-w-[1440px] mx-auto px-12">
+          <h2 class="text-4xl font-bold text-primary mb-16">
+            04 — Assumptions & Risk Management
+          </h2>
+
+          <!-- Two Column Layout -->
+          <div class="grid grid-cols-2 gap-12 mb-12">
+            <div>
+              <h3 class="text-lg font-bold text-primary mb-6">
+                Key Assumptions
+              </h3>
+              <ul class="space-y-4">
+                <li class="bg-white border border-gray-200 rounded-lg p-5">
+                  <div
+                    class="text-xs font-bold tracking-widest text-accent mb-2 uppercase"
+                  >
+                    Assumption 1
+                  </div>
+                  <p class="text-sm text-secondary">
+                    Agents will trust AI-suggested answers if sources are
+                    transparent and verifiable
+                  </p>
+                </li>
+                <li class="bg-white border border-gray-200 rounded-lg p-5">
+                  <div
+                    class="text-xs font-bold tracking-widest text-accent mb-2 uppercase"
+                  >
+                    Assumption 2
+                  </div>
+                  <p class="text-sm text-secondary">
+                    Reducing search time will directly improve handling time and
+                    resolution rates
+                  </p>
+                </li>
+                <li class="bg-white border border-gray-200 rounded-lg p-5">
+                  <div
+                    class="text-xs font-bold tracking-widest text-accent mb-2 uppercase"
+                  >
+                    Assumption 3
+                  </div>
+                  <p class="text-sm text-secondary">
+                    Existing knowledge base content is sufficient for initial AI
+                    training
+                  </p>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="text-lg font-bold text-primary mb-6">
+                Risk Impact Analysis
+              </h3>
+              <div class="space-y-4 text-sm text-secondary">
+                <p class="leading-relaxed">
+                  Each assumption carried product risk. If agents didn't trust
+                  the AI, adoption would fail regardless of technical accuracy.
+                  If search time wasn't the primary bottleneck, efficiency gains
+                  would be minimal.
+                </p>
+                <p class="leading-relaxed">
+                  Risk mitigation was built into the MVP strategy: transparent
+                  citations, manual override options, and early user testing
+                  with real support scenarios.
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Critical Assumption Highlight -->
+          <div
+            class="max-w-4xl bg-gray-50 border-l-4 border-accent p-8 rounded-lg"
+          >
+            <h3 class="text-sm font-bold text-primary mb-4">
+              Critical Assumption 1 — Agent Trust
+            </h3>
+            <p class="text-sm text-secondary leading-relaxed mb-4">
+              <strong>Validation Method:</strong> Conduct moderated usability
+              testing with 8-10 support agents using realistic ticket scenarios.
+              Measure trust through behavioral observation (do they verify
+              sources?) and post-task confidence ratings.
+            </p>
+            <p class="text-sm text-secondary leading-relaxed">
+              <strong>Success Criteria:</strong> 80% of agents express
+              confidence in using AI suggestions with transparent citations.
+              Less than 20% manually search for alternative sources after
+              receiving AI answer.
+            </p>
+          </div>
+        </div>
+      </section>
+
+      <!-- Document Divider -->
+      <div class="w-full max-w-[1440px] mx-auto px-12">
+        <div class="border-t border-gray-200"></div>
+      </div>
+
+      <!-- SECTION 05 — Core Journey -->
+      <section id="journey" class="w-full bg-white py-24">
+        <div class="max-w-[1440px] mx-auto px-12">
+          <h2 class="text-4xl font-bold text-primary mb-16">
+            05 — Core User Journey
+          </h2>
+
+          <!-- Vertical Timeline -->
+          <div class="max-w-3xl mx-auto space-y-8">
+            <div class="flex gap-6">
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-12 h-12 rounded-full bg-blue-50 border-2 border-blue-600 flex items-center justify-center text-blue-600"
+                >
+                  <i class="fa-solid fa-ticket"></i>
+                </div>
+                <div class="w-0.5 h-full bg-gray-200 mt-2"></div>
+              </div>
+              <div class="pb-8">
+                <h4 class="text-base font-bold text-primary mb-2">
+                  Ticket Received
+                </h4>
+                <p class="text-sm text-secondary">
+                  Agent opens customer support ticket requiring product
+                  knowledge
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-12 h-12 rounded-full bg-purple-50 border-2 border-purple-600 flex items-center justify-center text-purple-600"
+                >
+                  <i class="fa-solid fa-comment-dots"></i>
+                </div>
+                <div class="w-0.5 h-full bg-gray-200 mt-2"></div>
+              </div>
+              <div class="pb-8">
+                <h4 class="text-base font-bold text-primary mb-2">
+                  Ask Copilot
+                </h4>
+                <p class="text-sm text-secondary">
+                  Agent enters natural language query into AI Copilot interface
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-12 h-12 rounded-full bg-teal-50 border-2 border-teal-600 flex items-center justify-center text-teal-600"
+                >
+                  <i class="fa-solid fa-file-lines"></i>
+                </div>
+                <div class="w-0.5 h-full bg-gray-200 mt-2"></div>
+              </div>
+              <div class="pb-8">
+                <h4 class="text-base font-bold text-primary mb-2">
+                  Receive Cited Answer
+                </h4>
+                <p class="text-sm text-secondary">
+                  AI returns synthesized answer with linked source citations
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-12 h-12 rounded-full bg-orange-50 border-2 border-orange-600 flex items-center justify-center text-orange-600"
+                >
+                  <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+                <div class="w-0.5 h-full bg-gray-200 mt-2"></div>
+              </div>
+              <div class="pb-8">
+                <h4 class="text-base font-bold text-primary mb-2">
+                  Review Sources
+                </h4>
+                <p class="text-sm text-secondary">
+                  Agent clicks citations to verify accuracy and context
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-12 h-12 rounded-full bg-green-50 border-2 border-green-600 flex items-center justify-center text-green-600"
+                >
+                  <i class="fa-solid fa-reply"></i>
+                </div>
+                <div class="w-0.5 h-full bg-gray-200 mt-2"></div>
+              </div>
+              <div class="pb-8">
+                <h4 class="text-base font-bold text-primary mb-2">Respond</h4>
+                <p class="text-sm text-secondary">
+                  Agent adapts answer to customer context and sends response
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-6">
+              <div class="flex flex-col items-center">
+                <div
+                  class="w-12 h-12 rounded-full bg-accent border-2 border-accent flex items-center justify-center text-white"
+                >
+                  <i class="fa-solid fa-check"></i>
+                </div>
+              </div>
+              <div>
+                <h4 class="text-base font-bold text-primary mb-2">Resolve</h4>
+                <p class="text-sm text-secondary">
+                  Ticket marked resolved with reduced handling time
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Document Divider -->
+      <div class="w-full max-w-[1440px] mx-auto px-12">
+        <div class="border-t border-gray-200"></div>
+      </div>
+
+      <!-- SECTION 06 — Story Map & MVP -->
+      <section id="storymap" class="w-full bg-white py-24">
+        <div class="max-w-[1440px] mx-auto px-12">
+          <h2 class="text-4xl font-bold text-primary mb-16">
+            06 — Story Mapping & MVP Slice
+          </h2>
+
+          <div class="mb-12">
+            <div
+              class="inline-flex items-center gap-2 px-3 py-1.5 rounded bg-accent/10 border border-accent/20 mb-8"
+            >
+              <span
+                class="text-xs font-semibold tracking-wide text-accent uppercase"
+                >MVP Focus: Trust + Speed Validation</span
+              >
+            </div>
+          </div>
+
+          <!-- Story Map Visual -->
+          <div class="bg-gray-50 border border-gray-200 rounded-lg p-8 mb-12">
+            <div class="grid grid-cols-4 gap-6">
+              <div>
+                <div
+                  class="text-xs font-bold tracking-widest text-primary mb-4 uppercase"
+                >
+                  Activity 1
+                </div>
+                <div class="bg-white border border-gray-200 rounded p-4 mb-3">
+                  <p class="text-sm font-semibold text-primary mb-2">
+                    Ask Question
+                  </p>
+                  <div class="space-y-2">
+                    <div
+                      class="bg-accent/10 border border-accent/30 rounded px-3 py-2 text-xs text-primary"
+                    >
+                      Natural language input
+                    </div>
+                    <div
+                      class="bg-gray-100 border border-gray-200 rounded px-3 py-2 text-xs text-secondary"
+                    >
+                      Query suggestions
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="text-xs font-bold tracking-widest text-primary mb-4 uppercase"
+                >
+                  Activity 2
+                </div>
+                <div class="bg-white border border-gray-200 rounded p-4 mb-3">
+                  <p class="text-sm font-semibold text-primary mb-2">
+                    Get Answer
+                  </p>
+                  <div class="space-y-2">
+                    <div
+                      class="bg-accent/10 border border-accent/30 rounded px-3 py-2 text-xs text-primary"
+                    >
+                      AI-generated response
+                    </div>
+                    <div
+                      class="bg-accent/10 border border-accent/30 rounded px-3 py-2 text-xs text-primary"
+                    >
+                      Source citations
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="text-xs font-bold tracking-widest text-primary mb-4 uppercase"
+                >
+                  Activity 3
+                </div>
+                <div class="bg-white border border-gray-200 rounded p-4 mb-3">
+                  <p class="text-sm font-semibold text-primary mb-2">Verify</p>
+                  <div class="space-y-2">
+                    <div
+                      class="bg-accent/10 border border-accent/30 rounded px-3 py-2 text-xs text-primary"
+                    >
+                      View source docs
+                    </div>
+                    <div
+                      class="bg-gray-100 border border-gray-200 rounded px-3 py-2 text-xs text-secondary"
+                    >
+                      Confidence rating
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <div>
+                <div
+                  class="text-xs font-bold tracking-widest text-primary mb-4 uppercase"
+                >
+                  Activity 4
+                </div>
+                <div class="bg-white border border-gray-200 rounded p-4 mb-3">
+                  <p class="text-sm font-semibold text-primary mb-2">
+                    Use Answer
+                  </p>
+                  <div class="space-y-2">
+                    <div
+                      class="bg-accent/10 border border-accent/30 rounded px-3 py-2 text-xs text-primary"
+                    >
+                      Copy to clipboard
+                    </div>
+                    <div
+                      class="bg-gray-100 border border-gray-200 rounded px-3 py-2 text-xs text-secondary"
+                    >
+                      Answer history
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="mt-6 text-xs text-secondary italic text-center">
+              <i class="fa-solid fa-layer-group mr-2"></i>
+              Highlighted items = MVP scope | Gray items = Post-MVP
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Document Divider -->
+      <div class="w-full max-w-[1440px] mx-auto px-12">
+        <div class="border-t border-gray-200"></div>
+      </div>
+
+      <!-- SECTION 07 — User Stories -->
+      <section id="stories" class="w-full bg-white py-24">
+        <div class="max-w-[1440px] mx-auto px-12">
+          <h2 class="text-4xl font-bold text-primary mb-16">
+            07 — User Stories
+          </h2>
+
+          <!-- User Stories Grid -->
+          <div class="grid grid-cols-1 lg:grid-cols-2 gap-12">
+            <!-- Story 1 -->
+            <div class="bg-white border border-gray-200 rounded-lg p-8">
+              <div
+                class="text-xs font-bold tracking-widest text-accent mb-4 uppercase"
+              >
+                As a Support Agent
+              </div>
+              <ul class="space-y-3 text-sm text-secondary">
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-circle text-accent text-[6px] mt-2"></i>
+                  <span
+                    >When I receive a complex customer query, I want to quickly
+                    find relevant knowledge to answer accurately</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-circle text-accent text-[6px] mt-2"></i>
+                  <span
+                    >When I see AI suggestions, I want to verify sources to
+                    ensure accuracy and context</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-circle text-accent text-[6px] mt-2"></i>
+                  <span
+                    >When I receive an AI answer, I want to adapt it to the
+                    specific customer context before responding</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Story 2 -->
+            <div class="bg-white border border-gray-200 rounded-lg p-8">
+              <div
+                class="text-xs font-bold tracking-widest text-accent mb-4 uppercase"
+              >
+                As a Support Lead
+              </div>
+              <ul class="space-y-3 text-sm text-secondary">
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-circle text-accent text-[6px] mt-2"></i>
+                  <span
+                    >When I review team performance, I want to see metrics
+                    showing reduced search time and improved resolution
+                    rates</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-circle text-accent text-[6px] mt-2"></i>
+                  <span
+                    >When I identify knowledge gaps, I want to see which content
+                    is missing or outdated</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-circle text-accent text-[6px] mt-2"></i>
+                  <span
+                    >When I onboard new agents, I want to provide training
+                    materials that leverage the AI Copilot</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Document Divider -->
+      <div class="w-full max-w-[1440px] mx-auto px-12">
+        <div class="border-t border-gray-200"></div>
+      </div>
+
+      <!-- SECTION 08 — Traceability -->
+      <section id="traceability" class="w-full bg-white py-24">
+        <div class="max-w-[1440px] mx-auto px-12">
+          <h2 class="text-4xl font-bold text-primary mb-16">
+            08 — Traceability Matrix
+          </h2>
+
+          <!-- Traceability Table -->
+          <div class="bg-gray-50 border border-gray-200 rounded-lg p-8">
+            <div
+              class="text-xs font-bold tracking-widest text-accent mb-6 uppercase"
+            >
+              Product Goal → Backlog Item → Outcome
+            </div>
+            <div class="overflow-x-auto">
+              <table class="w-full">
+                <thead>
+                  <tr class="border-b border-gray-200">
+                    <th
+                      class="text-left text-xs font-bold text-primary py-3 px-4"
+                    >
+                      Product Goal
+                    </th>
+                    <th
+                      class="text-left text-xs font-bold text-primary py-3 px-4"
+                    >
+                      Backlog Item
+                    </th>
+                    <th
+                      class="text-left text-xs font-bold text-primary py-3 px-4"
+                    >
+                      Acceptance Criteria
+                    </th>
+                    <th
+                      class="text-left text-xs font-bold text-primary py-3 px-4"
+                    >
+                      Outcome Metric
+                    </th>
+                  </tr>
+                </thead>
+                <tbody class="divide-y divide-gray-100">
+                  <tr>
+                    <td class="py-3 px-4 text-sm text-secondary">
+                      Reduce AHT by 30-40%
+                    </td>
+                    <td class="py-3 px-4 text-sm text-secondary">
+                      AI Copilot - Search to Answer Flow
+                    </td>
+                    <td class="py-3 px-4 text-sm text-secondary">
+                      Answer provided within 10 seconds of query submission
+                    </td>
+                    <td class="py-3 px-4 text-sm text-secondary">
+                      AHT reduction from 120s to 72s
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 px-4 text-sm text-secondary">
+                      Increase FCR by 10-20%
+                    </td>
+                    <td class="py-3 px-4 text-sm text-secondary">
+                      AI Copilot - First Contact Resolution
+                    </td>
+                    <td class="py-3 px-4 text-sm text-secondary">
+                      Customer issue resolved on first interaction
+                    </td>
+                    <td class="py-3 px-4 text-sm text-secondary">
+                      FCR from 65% to 78%
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 px-4 text-sm text-secondary">
+                      Reduce Reopen Rate by 15%
+                    </td>
+                    <td class="py-3 px-4 text-sm text-secondary">
+                      AI Copilot - Answer Accuracy
+                    </td>
+                    <td class="py-3 px-4 text-sm text-secondary">
+                      Customer returns to agent with no follow-up questions
+                    </td>
+                    <td class="py-3 px-4 text-sm text-secondary">
+                      Reopen rate from 25% to 21.25%
+                    </td>
+                  </tr>
+                  <tr>
+                    <td class="py-3 px-4 text-sm text-secondary">
+                      Improve Agent Confidence Score by 25%
+                    </td>
+                    <td class="py-3 px-4 text-sm text-secondary">
+                      AI Copilot - Trust & Transparency
+                    </td>
+                    <td class="py-3 px-4 text-sm text-secondary">
+                      80% of agents express confidence in AI suggestions
+                    </td>
+                    <td class="py-3 px-4 text-sm text-secondary">
+                      Confidence score from 5.0 to 6.25/10
+                    </td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- Document Divider -->
+      <div class="w-full max-w-[1440px] mx-auto px-12">
+        <div class="border-t border-gray-200"></div>
+      </div>
+
+      <!-- SECTION 09 — Reflection -->
+      <section id="reflection" class="w-full bg-white py-24">
+        <div class="max-w-[1440px] mx-auto px-12">
+          <h2 class="text-4xl font-bold text-primary mb-16">
+            09 — Reflection & Lessons Learned
+          </h2>
+
+          <!-- Reflection Content -->
+          <div class="space-y-8">
+            <!-- Key Success Factors -->
+            <div class="bg-white border border-gray-200 rounded-lg p-8">
+              <h3 class="text-xl font-bold text-primary mb-6">
+                Key Success Factors
+              </h3>
+              <ul class="space-y-4 text-sm text-secondary">
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-check text-accent text-[10px]"></i>
+                  <span
+                    >Starting with a clear, measurable vision that aligned with
+                    business objectives</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-check text-accent text-[10px]"></i>
+                  <span
+                    >Validating assumptions through early user testing with real
+                    support scenarios</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-check text-accent text-[10px]"></i>
+                  <span
+                    >Building trust through transparent source citations and
+                    manual override options</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <i class="fa-solid fa-check text-accent text-[10px]"></i>
+                  <span
+                    >Using story mapping to prioritize high-impact features and
+                    validate MVP scope</span
+                  >
+                </li>
+              </ul>
+            </div>
+
+            <!-- Challenges & Learnings -->
+            <div class="bg-white border border-gray-200 rounded-lg p-8">
+              <h3 class="text-xl font-bold text-primary mb-6">
+                Challenges & Learnings
+              </h3>
+              <ul class="space-y-4 text-sm text-secondary">
+                <li class="flex items-start gap-3">
+                  <i
+                    class="fa-solid fa-exclamation text-accent text-[10px]"
+                  ></i>
+                  <span
+                    >Initial resistance from agents who were skeptical about AI
+                    recommendations</span
+                  >
+                  <p class="text-xs text-secondary/70 mt-1">
+                    → Learned: Transparency and source verification are critical
+                    for building trust
+                  </p>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i
+                    class="fa-solid fa-exclamation text-accent text-[10px]"
+                  ></i>
+                  <span
+                    >Difficulty in measuring search time reduction
+                    accurately</span
+                  >
+                  <p class="text-xs text-secondary/70 mt-1">
+                    → Learned: Need for more granular metrics and better
+                    baseline data collection
+                  </p>
+                </li>
+                <li class="flex items-start gap-3">
+                  <i
+                    class="fa-solid fa-exclamation text-accent text-[10px]"
+                  ></i>
+                  <span
+                    >Content quality issues in the knowledge base affecting AI
+                    accuracy</span
+                  >
+                  <p class="text-xs text-secondary/70 mt-1">
+                    → Learned: Need for continuous content quality audits and
+                    updates
+                  </p>
+                </li>
+              </ul>
+            </div>
+
+            <!-- Future Roadmap -->
+            <div class="bg-white border border-gray-200 rounded-lg p-8">
+              <h3 class="text-xl font-bold text-primary mb-6">
+                Future Roadmap
+              </h3>
+              <ul class="space-y-4 text-sm text-secondary">
+                <li class="flex items-start gap-3">
+                  <i
+                    class="fa-solid fa-arrow-right text-accent text-[10px]"
+                  ></i>
+                  <span
+                    >Expand AI capabilities to include natural language
+                    summarization and content generation</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <i
+                    class="fa-solid fa-arrow-right text-accent text-[10px]"
+                  ></i>
+                  <span
+                    >Integrate with customer service platforms for automated
+                    ticket resolution</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <i
+                    class="fa-solid fa-arrow-right text-accent text-[10px]"
+                  ></i>
+                  <span
+                    >Develop self-service portal for customers to access
+                    knowledge and submit questions</span
+                  >
+                </li>
+                <li class="flex items-start gap-3">
+                  <i
+                    class="fa-solid fa-arrow-right text-accent text-[10px]"
+                  ></i>
+                  <span
+                    >Implement continuous learning system to improve AI accuracy
+                    over time</span
+                  >
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <script>
+      // Mobile navigation toggle
+      document
+        .getElementById("mobile-nav-toggle")
+        .addEventListener("click", function () {
+          const mobileNavContent =
+            document.getElementById("mobile-nav-content");
+          mobileNavContent.classList.toggle("hidden");
+        });
+
+      // Close mobile nav when clicking on a link
+      document.querySelectorAll(".mobile-nav-link").forEach((link) => {
+        link.addEventListener("click", function () {
+          document.getElementById("mobile-nav-content").classList.add("hidden");
+        });
+      });
+
+      // Sticky navigation behavior
+      const header = document.getElementById("header");
+      const caseStudyNav = document.getElementById("case-study-nav");
+      const mobileNav = document.getElementById("mobile-nav-dropdown");
+
+      window.addEventListener("scroll", function () {
+        const scrollPosition = window.scrollY;
+
+        // Show sticky nav when scrolled past header
+        if (scrollPosition > 100) {
+          header.classList.add("bg-white/95");
+          header.classList.add("backdrop-blur-sm");
+          header.classList.add("border-b");
+          header.classList.add("border-gray-200");
+        } else {
+          header.classList.remove("bg-white/95");
+          header.classList.remove("backdrop-blur-sm");
+          header.classList.remove("border-b");
+          header.classList.remove("border-gray-200");
+        }
+
+        // Show case study nav when scrolled past header
+        if (scrollPosition > 100) {
+          caseStudyNav.classList.remove("hidden");
+        } else {
+          caseStudyNav.classList.add("hidden");
+        }
+
+        // Show mobile nav when scrolled past header
+        if (scrollPosition > 100) {
+          mobileNav.classList.remove("hidden");
+        } else {
+          mobileNav.classList.add("hidden");
+        }
+      });
+    </script>
+  </body>
+</html>

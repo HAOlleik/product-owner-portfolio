@@ -1,0 +1,54 @@
+.termButton {
+  position: relative;
+  border: 0;
+  background: none;
+  color: var(--color-primary);
+  padding: 0;
+  margin: 0;
+  font: inherit;
+  cursor: pointer;
+  border-bottom: 1px dotted var(--color-accent);
+  transition: color 160ms ease;
+}
+
+.termButton:hover,
+.termButton:focus-visible {
+  color: var(--color-accent);
+}
+
+.termButton:focus-visible {
+  outline: 2px solid color-mix(in srgb, var(--color-accent) 45%, white);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
+.tooltip {
+  position: absolute;
+  left: 0;
+  top: calc(100% + 10px);
+  min-width: 220px;
+  max-width: 320px;
+  padding: 0.75rem;
+  border-radius: 10px;
+  background: var(--color-primary);
+  color: #ffffff;
+  font-size: 0.75rem;
+  line-height: 1.45;
+  box-shadow: 0 14px 28px rgba(15, 23, 42, 0.24);
+  z-index: 40;
+}
+
+.tooltipTitle {
+  display: block;
+  font-size: 0.72rem;
+  text-transform: uppercase;
+  letter-spacing: 0.07em;
+  color: color-mix(in srgb, var(--color-accent) 85%, white);
+  margin-bottom: 0.3rem;
+}
+
+@media (max-width: 1023px) {
+  .tooltip {
+    display: none;
+  }
+}

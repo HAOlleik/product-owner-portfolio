@@ -1,0 +1,35 @@
+.richText {
+  display: grid;
+  gap: 0.95rem;
+}
+
+.paragraph {
+  color: var(--color-secondary);
+  line-height: 1.72;
+  margin: 0;
+}
+
+.list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.62rem;
+}
+
+.listItem {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  color: var(--color-secondary);
+  line-height: 1.58;
+}
+
+.bullet {
+  width: 6px;
+  height: 6px;
+  margin-top: 0.53rem;
+  border-radius: 999px;
+  background: var(--color-accent);
+  flex-shrink: 0;
+}

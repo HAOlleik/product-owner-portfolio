@@ -1,0 +1,49 @@
+.layout {
+  display: grid;
+  gap: 1.45rem;
+}
+
+.card {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: #ffffff;
+  padding: 1rem;
+}
+
+.title {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 1.03rem;
+}
+
+.list {
+  margin: 0.85rem 0 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  gap: 0.62rem;
+}
+
+.item {
+  display: grid;
+  grid-template-columns: 16px 1fr;
+  gap: 0.65rem;
+  color: var(--color-secondary);
+  line-height: 1.57;
+}
+
+.icon {
+  color: var(--color-accent);
+  font-size: 0.72rem;
+  margin-top: 0.25rem;
+}
+
+.challengeText {
+  color: var(--color-primary);
+}
+
+.learning {
+  margin-top: 0.24rem;
+  color: var(--color-secondary);
+  font-size: 0.82rem;
+}

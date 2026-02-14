@@ -1,0 +1,92 @@
+.layout {
+  display: grid;
+  gap: 1.6rem;
+}
+
+.timeline {
+  margin: 0 auto;
+  max-width: 860px;
+  display: grid;
+  gap: 0.9rem;
+}
+
+.step {
+  display: grid;
+  grid-template-columns: 58px 1fr;
+  gap: 0.85rem;
+}
+
+.stepRail {
+  display: grid;
+  grid-template-rows: 54px 1fr;
+  justify-items: center;
+}
+
+.stepIcon {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px solid;
+  font-size: 1rem;
+}
+
+.iconBlue {
+  background: #eff6ff;
+  color: #2563eb;
+  border-color: #2563eb;
+}
+
+.iconPurple {
+  background: #f5f3ff;
+  color: #7c3aed;
+  border-color: #7c3aed;
+}
+
+.iconTeal {
+  background: #f0fdfa;
+  color: #0f766e;
+  border-color: #0f766e;
+}
+
+.iconOrange {
+  background: #fff7ed;
+  color: #ea580c;
+  border-color: #ea580c;
+}
+
+.iconGreen {
+  background: #f0fdf4;
+  color: #15803d;
+  border-color: #15803d;
+}
+
+.iconAccent {
+  background: var(--color-accent);
+  color: #ffffff;
+  border-color: var(--color-accent);
+}
+
+.rail {
+  width: 2px;
+  background: var(--color-border);
+  margin-top: 0.5rem;
+}
+
+.stepContent {
+  padding-top: 0.3rem;
+}
+
+.stepTitle {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 0.98rem;
+}
+
+.stepText {
+  margin: 0.35rem 0 0;
+  color: var(--color-secondary);
+  line-height: 1.62;
+}
