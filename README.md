@@ -91,6 +91,11 @@ Build command:
 npm run build
 ```
 
+Update Website command:
+```bash
+npm run deploy
+```
+
 Output directory:
 
 ```txt
