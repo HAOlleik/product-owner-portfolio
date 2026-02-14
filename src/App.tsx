@@ -1,7 +1,6 @@
 import { useEffect, useMemo, useState } from "react";
 
 import { AppLayout } from "./components/AppLayout/AppLayout";
-import { CaseStudyStructureCards } from "./components/CaseStudyStructureCards/CaseStudyStructureCards";
 import { GlossaryDrawer } from "./components/GlossaryDrawer/GlossaryDrawer";
 import { GoalsSection } from "./components/GoalsSection/GoalsSection";
 import { Hero } from "./components/Hero/Hero";
@@ -103,12 +102,7 @@ const App = (): React.ReactElement => {
           onNavigate={handleNavigate}
         />
 
-        <PhilosophySection
-          content={caseStudyContent.philosophy}
-          onOpenArtifact={(artifact) => setActiveArtifact(artifact)}
-        />
-
-        <CaseStudyStructureCards content={caseStudyContent.structure} />
+        <PhilosophySection content={caseStudyContent.philosophy} />
 
         <VisionSection
           content={caseStudyContent.vision}

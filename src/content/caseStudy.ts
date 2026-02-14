@@ -16,20 +16,19 @@ const artifactFiles = {
 
 export const caseStudyContent: CaseStudyContent = {
   siteMeta: {
-    title: "Product Owner Portfolio - AI Knowledge Copilot Case Study",
+    title: "Product Owner Portfolio - Case Study",
     description:
       "A strategic product ownership case study focused on measurable outcomes, structured prioritization, and decision traceability.",
     badge: "Product Owner Portfolio",
-    shortTitle: "Case Study: AI Copilot",
+    shortTitle: "Product Owner Portfolio - Case Study",
   },
   navItems: [
-    { label: "Overview", anchorId: "hero", sectionNumber: "00" },
+    { label: "Overview", anchorId: "hero", sectionNumber: "" },
     {
       label: "Product Philosophy",
       anchorId: "philosophy",
-      sectionNumber: "00",
+      sectionNumber: "",
     },
-    { label: "Framework", anchorId: "structure", sectionNumber: "00" },
     { label: "Vision", anchorId: "vision", sectionNumber: "01" },
     { label: "Goals", anchorId: "goals", sectionNumber: "02" },
     { label: "Personas", anchorId: "personas", sectionNumber: "03" },
@@ -47,23 +46,25 @@ export const caseStudyContent: CaseStudyContent = {
   hero: {
     sectionId: "hero",
     titleLines: [
-      "AI Knowledge Copilot",
-      "A Strategic End-to-End Product",
-      "Ownership Case Study",
+      "AI Knowledge Copilot -",
+      "PO Case Study",
     ],
     subtitle:
-      "A disciplined product journey focused on measurable impact, validated decision-making, and structured prioritization.",
+      "A disciplined product initiative designed to address support inefficiencies and inconsistent customer responses through outcome-driven Product Ownership.",
+    roleTitle: "My Role as Product Owner",
     highlights: [
-      "Vision-driven strategy",
-      "Evidence-based discovery with personas",
-      "User Story Mapping for MVP Slice definition",
-      "Outcome metrics anchored in AHT, FCR, and Reopen Rate",
+      "Defined measurable success outcomes aligned to operational KPIs",
+      "Conducted discovery interviews and persona validation",
+      "Facilitated story mapping workshops",
+      "Owned backlog ordering and made value-based trade-off decisions under delivery constraints",
+      "Defined acceptance criteria and quality alignment",
+      "Led Sprint Reviews and stakeholder alignment",
     ],
     supportText:
-      "This case study documents strategy, discovery, prioritization, and delivery readiness with explicit Traceability.",
+      "This case study demonstrates how strategic problem framing, structured discovery, and value-based backlog trade-offs were used to drive measurable operational impact under real delivery constraints.",
     ctaPrimary: {
       label: "View Case Study",
-      targetId: "structure",
+      targetId: "vision",
     },
     ctaSecondary: {
       label: "Product Philosophy",
@@ -73,27 +74,27 @@ export const caseStudyContent: CaseStudyContent = {
       {
         label: "Vision",
         description:
-          "Problem framing with Product Vision vs Product Goal distinction",
+          "Framed the operational support problem and clarified the distinction between long-term Product Vision and measurable Product Goal.",
       },
       {
         label: "Research",
         description:
-          "Discovery interviews, Persona vs Proto-Persona validation, and pain mapping",
+          "Conducted structured discovery interviews, validated personas, and mapped key support pain points affecting efficiency and consistency.",
       },
       {
         label: "Mapping",
         description:
-          "User Story Mapping to identify the highest-value MVP Slice",
+          "Applied User Story Mapping to identify the highest-value vertical MVP slice directly tied to measurable outcomes.",
       },
       {
         label: "Backlog",
         description:
-          "INVEST-ready backlog items with explicit Acceptance Criteria",
+          "Ordered the Product Backlog using value, cost, risk, and learning considerations, with INVEST-ready stories and explicit acceptance criteria.",
       },
       {
         label: "Outcome",
         description:
-          "Validation against Average Handle Time (AHT), First Contact Resolution (FCR), and Reopen Rate",
+          "Validated impact against operational KPIs including Average Handle Time (AHT), First Contact Resolution (FCR), and Reopen Rate.",
       },
     ],
   },
@@ -102,52 +103,38 @@ export const caseStudyContent: CaseStudyContent = {
     title: "Product Philosophy",
     subtitle: "How I operate as a Product Owner",
     narrative:
-      "I treat product ownership as value maximization through clarity, alignment, and disciplined decisions. Product Vision vs Product Goal alignment keeps discovery and delivery focused on measurable outcomes rather than output volume.",
+      "I operate as a Scrum Product Owner accountable for maximizing product value through effective Product Backlog management. This means defining a clear Product Goal, ordering backlog items based on measurable impact, and ensuring transparency from strategy to delivered behavior. My operating model centers on disciplined decision-making, alignment with stakeholders, and continuous inspection and adaptation.",
     principles: [
       {
         title: "Vision to Backlog Alignment",
         description:
-          "Every backlog item must connect to a product goal and a measurable outcome.",
+          "Every backlog item must trace directly to a Product Goal and a measurable outcome. As Product Owner, I am accountable for ordering the backlog to reflect value, risk, and learning priorities while maintaining transparency across stakeholders and the Scrum Team.",
       },
       {
         title: "Conversation-First Requirements",
         description:
-          "User stories are collaboration anchors, then refined with Acceptance Criteria to remove ambiguity.",
+          "User stories serve as collaboration anchors rather than complete specifications. Following Cohn’s conversation-first approach and Ron Jeffries’ “Card, Conversation, Confirmation” model, written stories initiate dialogue, and Acceptance Criteria clarify expectations without replacing team discussion.",
       },
       {
         title: "Outcome over Output",
         description:
-          "Prioritization is based on impact signals such as Average Handle Time (AHT), First Contact Resolution (FCR), and Reopen Rate.",
+          "Prioritization decisions are guided by expected movement in operational KPIs such as Average Handle Time (AHT), First Contact Resolution (FCR), and Reopen Rate. I prioritize work based on value relative to cost, risk, and learning impact — not feature volume.",
       },
       {
         title: "Risk-First Delivery",
         description:
-          "Assumptions vs Risks are documented early and validated through targeted experiments.",
+          "Assumptions are converted into testable risks early and validated through incremental delivery. I rely on empiricism — leveraging Sprint Reviews, Retrospectives, and continuous backlog refinement — to adapt decisions based on evidence rather than upfront certainty.",
       },
     ],
     operatingModelTitle: "Operating Model (repeatable cycle)",
     operatingModelItems: [
-      "Define product goals and expected metric movement.",
-      "Convert assumptions into testable risks and validation plans.",
-      "Use User Story Mapping to shape a coherent MVP Slice.",
-      "Maintain a prioritized backlog using INVEST quality checks.",
-      "Write Acceptance Criteria that are testable and observable.",
-      "Preserve Traceability from goals to delivered behavior.",
-    ],
-    artifacts: [
-      {
-        id: "roles",
-        label: "Roles and Responsibilities",
-        filename: artifactFiles.roles,
-        description: "RACI and ownership boundaries for product decisions.",
-      },
-      {
-        id: "process",
-        label: "Product Process",
-        filename: artifactFiles.process,
-        description: "Discovery-to-delivery operating rhythm and governance.",
-      },
-    ],
+      "Define a measurable Product Goal and expected metric movement.",
+      "Translate assumptions into explicit risks and validation experiments.",
+      "Use User Story Mapping to define a coherent, value-driven MVP slice.",
+      "Order the Product Backlog based on value, cost, risk, and learning.",
+      "Ensure stories meet INVEST quality and include explicit Acceptance Criteria.",
+      "Maintain end-to-end traceability from Product Goal to delivered increment.",
+    ]
   },
   structure: {
     sectionId: "structure",

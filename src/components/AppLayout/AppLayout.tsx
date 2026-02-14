@@ -38,12 +38,8 @@ export const AppLayout = ({
             onNavigate("hero");
           }}
         >
-          <span className={styles.brandBadge}>PO</span>
           <span className={styles.brandText}>{siteMeta.shortTitle}</span>
         </a>
-        <span className={styles.headerMeta}>
-          Single-page portfolio case study
-        </span>
       </div>
     </header>
 

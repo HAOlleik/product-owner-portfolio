@@ -27,6 +27,7 @@ export interface HeroContent {
   sectionId: string;
   titleLines: string[];
   subtitle: string;
+  roleTitle: string;
   highlights: string[];
   supportText: string;
   ctaPrimary: {
@@ -200,7 +201,6 @@ export interface PhilosophyContent {
   principles: PhilosophyPrinciple[];
   operatingModelTitle: string;
   operatingModelItems: string[];
-  artifacts: ArtifactRef[];
 }
 
 export interface StructureContent {

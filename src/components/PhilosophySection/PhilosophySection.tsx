@@ -1,22 +1,19 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
-import type { ArtifactRef, PhilosophyContent } from "../../types/caseStudy";
+import type { PhilosophyContent } from "../../types/caseStudy";
 import { useGlossaryRenderer } from "../../hooks/useGlossaryRenderer";
 
-import { ArtifactsPanel } from "../ArtifactsPanel/ArtifactsPanel";
 import { RichText } from "../RichText/RichText";
 
 import styles from "./PhilosophySection.module.css";
 
 interface PhilosophySectionProps {
   content: PhilosophyContent;
-  onOpenArtifact: (artifact: ArtifactRef) => void;
 }
 
 export const PhilosophySection = ({
   content,
-  onOpenArtifact,
 }: PhilosophySectionProps): React.ReactElement => {
   const { renderWithGlossaryTerms } = useGlossaryRenderer();
 
@@ -32,11 +29,6 @@ export const PhilosophySection = ({
             <h2 className={styles.title}>{content.title}</h2>
             <p className={styles.subtitle}>{content.subtitle}</p>
           </header>
-
-          <ArtifactsPanel
-            artifacts={content.artifacts}
-            onOpenArtifact={onOpenArtifact}
-          />
 
           <div className={styles.content}>
             <div>

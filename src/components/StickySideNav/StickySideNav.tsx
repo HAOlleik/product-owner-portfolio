@@ -33,15 +33,18 @@ export const StickySideNav = ({
         <ul className={styles.navList}>
           {navItems.map((item) => {
             const isActive = item.anchorId === activeSectionId;
+            const hasSectionNumber = item.sectionNumber.trim().length > 0;
             return (
               <li key={item.anchorId}>
                 <button
                   type="button"
-                  className={`${styles.navItem} ${isActive ? styles.navItemActive : ""}`}
+                  className={`${styles.navItem} ${!hasSectionNumber ? styles.navItemNoNumber : ""} ${isActive ? styles.navItemActive : ""}`}
                   onClick={() => handleNavigate(item.anchorId)}
                   aria-current={isActive ? "true" : undefined}
                 >
-                  <span className={styles.navNumber}>{item.sectionNumber}</span>
+                  {hasSectionNumber ? (
+                    <span className={styles.navNumber}>{item.sectionNumber}</span>
+                  ) : null}
                   <span className={styles.navText}>{item.label}</span>
                 </button>
               </li>
@@ -75,15 +78,18 @@ export const StickySideNav = ({
           <div className={styles.mobilePanel}>
             {navItems.map((item) => {
               const isActive = item.anchorId === activeSectionId;
+              const hasSectionNumber = item.sectionNumber.trim().length > 0;
               return (
                 <button
                   key={item.anchorId}
                   type="button"
-                  className={`${styles.mobileLink} ${isActive ? styles.mobileLinkActive : ""}`}
+                  className={`${styles.mobileLink} ${!hasSectionNumber ? styles.mobileLinkNoNumber : ""} ${isActive ? styles.mobileLinkActive : ""}`}
                   onClick={() => handleNavigate(item.anchorId)}
                   aria-current={isActive ? "true" : undefined}
                 >
-                  <span className={styles.navNumber}>{item.sectionNumber}</span>
+                  {hasSectionNumber ? (
+                    <span className={styles.navNumber}>{item.sectionNumber}</span>
+                  ) : null}
                   <span className={styles.navText}>{item.label}</span>
                 </button>
               );

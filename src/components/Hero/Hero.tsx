@@ -34,6 +34,7 @@ export const Hero = ({
         <div className={styles.subtitle}>
           {renderWithGlossaryTerms(hero.subtitle, `${hero.sectionId}-subtitle`)}
         </div>
+        <div className={styles.badge}>{hero.roleTitle}</div>
 
         <ul className={styles.highlightList}>
           {hero.highlights.map((highlight, index) => (
