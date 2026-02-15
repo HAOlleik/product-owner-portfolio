@@ -33,58 +33,16 @@ export const StoryMapSection = ({
           paragraphs={content.introParagraphs}
         />
 
-        <span className={styles.focusTag}>
-          {renderWithGlossaryTerms(
-            content.focusLabel,
-            `${content.header.id}-focus`,
-          )}
-        </span>
-
         <div className={styles.mapCard}>
-          {content.embed.embedUrl ? (
-            <>
-              <iframe
-                className={styles.embedFrame}
-                src={content.embed.embedUrl}
-                title={content.embed.title}
-              />
-              <a
-                className={styles.fallbackLink}
-                href={content.embed.fallbackUrl}
-                target="_blank"
-                rel="noreferrer"
-              >
-                Open story map artifact
-              </a>
-            </>
-          ) : (
-            <>
-              <div className={styles.grid}>
-                {content.activities.map((activity, index) => (
-                  <section key={activity.title}>
-                    <p className={styles.columnLabel}>Activity {index + 1}</p>
-                    <div className={styles.columnCard}>
-                      <h3 className={styles.columnTitle}>{activity.title}</h3>
-                      <ul className={styles.itemList}>
-                        {activity.items.map((item) => (
-                          <li
-                            key={item.label}
-                            className={`${styles.item} ${item.inMvp ? styles.itemMvp : styles.itemPost}`}
-                          >
-                            {renderWithGlossaryTerms(
-                              item.label,
-                              `${content.header.id}-item-${activity.title}-${item.label}`,
-                            )}
-                          </li>
-                        ))}
-                      </ul>
-                    </div>
-                  </section>
-                ))}
-              </div>
-              <p className={styles.legend}>{content.legend}</p>
-            </>
-          )}
+          <iframe
+            className={styles.embedFrame}
+            style={{ border: "none" }}
+            width={800}
+            height={450}
+            src={content.embedUrl}
+            title={content.embedTitle}
+            loading="lazy"
+          />
         </div>
       </div>
     </SectionWrapper>

@@ -110,7 +110,7 @@ export const PersonasSection = ({
         </div>
 
         <article className={styles.insights}>
-          <h3 className={styles.insightsTitle}>Key Behavioral Insights</h3>
+          <h3 className={styles.insightsTitle}>Validated Behavioral Insights</h3>
           <RichText
             sectionId={content.header.id}
             renderWithGlossaryTerms={renderWithGlossaryTerms}

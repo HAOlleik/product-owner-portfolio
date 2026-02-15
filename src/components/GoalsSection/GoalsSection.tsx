@@ -33,6 +33,17 @@ export const GoalsSection = ({
           paragraphs={content.introParagraphs}
         />
 
+        <div className={styles.statement}>
+          <h3 className={styles.subheading}>Product Goal Statement</h3>
+          <div className={styles.statementText}>
+            <RichText
+              sectionId={content.header.id}
+              renderWithGlossaryTerms={renderWithGlossaryTerms}
+              paragraphs={[content.goalStatement]}
+            />
+          </div>
+        </div>
+
         <div className={styles.kpiGrid}>
           {content.kpis.map((kpi, index) => (
             <article key={kpi.metric} className={styles.kpiCard}>

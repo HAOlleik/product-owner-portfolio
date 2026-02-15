@@ -24,19 +24,11 @@ export const caseStudyContent: CaseStudyContent = {
   },
   navItems: [
     { label: "Overview", anchorId: "hero", sectionNumber: "" },
-    {
-      label: "Product Philosophy",
-      anchorId: "philosophy",
-      sectionNumber: "",
-    },
+    { label: "Product Philosophy", anchorId: "philosophy", sectionNumber: "" },
     { label: "Vision", anchorId: "vision", sectionNumber: "01" },
     { label: "Goals", anchorId: "goals", sectionNumber: "02" },
     { label: "Personas", anchorId: "personas", sectionNumber: "03" },
-    {
-      label: "Assumptions and Risks",
-      anchorId: "assumptions",
-      sectionNumber: "04",
-    },
+    { label: "Assumptions and Risks", anchorId: "assumptions", sectionNumber: "04"},
     { label: "Core Journey", anchorId: "journey", sectionNumber: "05" },
     { label: "Story Map and MVP", anchorId: "storymap", sectionNumber: "06" },
     { label: "User Stories", anchorId: "stories", sectionNumber: "07" },
@@ -50,7 +42,7 @@ export const caseStudyContent: CaseStudyContent = {
       "PO Case Study",
     ],
     subtitle:
-      "A disciplined product initiative designed to address support inefficiencies and inconsistent customer responses through outcome-driven Product Ownership.",
+      "A structured Product Ownership initiative designed to reduce Average Handle Time (AHT) and increase First Contact Resolution (FCR) by solving fragmented support knowledge retrieval.",
     roleTitle: "My Role as Product Owner",
     highlights: [
       "Defined measurable success outcomes aligned to operational KPIs",
@@ -61,7 +53,7 @@ export const caseStudyContent: CaseStudyContent = {
       "Led Sprint Reviews and stakeholder alignment",
     ],
     supportText:
-      "This case study demonstrates how strategic problem framing, structured discovery, and value-based backlog trade-offs were used to drive measurable operational impact under real delivery constraints.",
+      "This case study demonstrates how measurable Product Goals, explicit risk validation, and disciplined backlog ordering were used to drive operational KPI movement under delivery constraints.",
     ctaPrimary: {
       label: "View Case Study",
       targetId: "vision",
@@ -94,7 +86,7 @@ export const caseStudyContent: CaseStudyContent = {
       {
         label: "Outcome",
         description:
-          "Validated impact against operational KPIs including Average Handle Time (AHT), First Contact Resolution (FCR), and Reopen Rate.",
+          "Measured KPI movement against defined baselines to confirm whether the MVP Slice meaningfully impacted AHT, FCR, and Reopen Rate.",
       },
     ],
   },
@@ -103,17 +95,17 @@ export const caseStudyContent: CaseStudyContent = {
     title: "Product Philosophy",
     subtitle: "How I operate as a Product Owner",
     narrative:
-      "I operate as a Scrum Product Owner accountable for maximizing product value through effective Product Backlog management. This means defining a clear Product Goal, ordering backlog items based on measurable impact, and ensuring transparency from strategy to delivered behavior. My operating model centers on disciplined decision-making, alignment with stakeholders, and continuous inspection and adaptation.",
+      "As a Scrum Product Owner, I am accountable for maximizing product value through disciplined Product Backlog management — defining a clear Product Goal, ordering work by measurable impact, and ensuring transparency from strategy to delivered behavior.",
     principles: [
       {
         title: "Vision to Backlog Alignment",
         description:
-          "Every backlog item must trace directly to a Product Goal and a measurable outcome. As Product Owner, I am accountable for ordering the backlog to reflect value, risk, and learning priorities while maintaining transparency across stakeholders and the Scrum Team.",
+          "Every backlog item must trace directly to a Product Goal and measurable outcome. I order work based on value, cost, risk, and learning impact — ensuring alignment across stakeholders and the Scrum Team.",
       },
       {
         title: "Conversation-First Requirements",
         description:
-          "User stories serve as collaboration anchors rather than complete specifications. Following Cohn’s conversation-first approach and Ron Jeffries’ “Card, Conversation, Confirmation” model, written stories initiate dialogue, and Acceptance Criteria clarify expectations without replacing team discussion.",
+          "User stories are conversation starters — not specifications. Written stories anchor discussion, and Acceptance Criteria clarify expectations without replacing team collaboration.",
       },
       {
         title: "Outcome over Output",
@@ -133,47 +125,8 @@ export const caseStudyContent: CaseStudyContent = {
       "Use User Story Mapping to define a coherent, value-driven MVP slice.",
       "Order the Product Backlog based on value, cost, risk, and learning.",
       "Ensure stories meet INVEST quality and include explicit Acceptance Criteria.",
-      "Maintain end-to-end traceability from Product Goal to delivered increment.",
+      "Maintain end-to-end traceability from Product Goal → backlog capability → Acceptance Criteria → measurable outcome.",
     ]
-  },
-  structure: {
-    sectionId: "structure",
-    title: "How This Case Study Is Structured",
-    cards: [
-      {
-        step: "Step 1",
-        title: "Vision and Goals",
-        description:
-          "Define strategic context, desired outcomes, and measurable success before solution design.",
-        icon: "compass",
-        accent: "blue",
-      },
-      {
-        step: "Step 2",
-        title: "Research and Personas",
-        description:
-          "Validate assumptions through interviews and convert proto-personas into evidence-backed personas.",
-        icon: "user",
-        accent: "purple",
-      },
-      {
-        step: "Step 3",
-        title: "Story Mapping and MVP",
-        description:
-          "Use User Story Mapping to prioritize the MVP Slice that best validates value and risk.",
-        icon: "list-check",
-        accent: "orange",
-      },
-      {
-        step: "Step 4",
-        title: "Backlog and Traceability",
-        description:
-          "Translate scope into INVEST stories with Acceptance Criteria and explicit outcome linkage.",
-        icon: "code-branch",
-        accent: "teal",
-      },
-    ],
-    footerHint: "Scroll to review each artifact and decision trail.",
   },
   vision: {
     header: {
@@ -181,31 +134,16 @@ export const caseStudyContent: CaseStudyContent = {
       sectionNumber: "01",
       title: "Strategic Vision",
       subtitle: "Problem framing and long-term direction",
-      artifacts: [
-        {
-          id: "vision",
-          label: "Vision Statement",
-          filename: artifactFiles.vision,
-          description: "Formal vision statement and strategic context.",
-        },
-        {
-          id: "vision-board",
-          label: "Vision Board",
-          filename: artifactFiles.visionBoard,
-          description:
-            "Visual map of opportunities, constraints, and outcomes.",
-        },
-      ],
+      artifacts: [],
     },
     introParagraphs: [
-      "This section defines strategic intent before solution detail. Product Vision vs Product Goal framing was used to separate long-term direction from near-term execution targets.",
     ],
     problemContext: [
       "Support agents spend significant time searching fragmented knowledge sources, which slows responses and reduces consistency.",
       "The compounding effect is operational drag: slower resolution, lower confidence, and uneven customer experience quality.",
     ],
     visionStatement:
-      "Enable support agents to deliver accurate, consistent answers in seconds by surfacing context-relevant knowledge with transparent citations and clear confidence signals.",
+      "Empower SaaS customer support teams to deliver fast, consistent, and citation-backed answers through an AI knowledge copilot grounded in approved internal knowledge sources — replacing fragmented documentation workflows and unreliable generic AI tools.",
     strategicIntent: [
       {
         title: "Business Impact",
@@ -239,46 +177,27 @@ export const caseStudyContent: CaseStudyContent = {
       sectionNumber: "02",
       title: "Measurable Product Goals",
       subtitle: "Outcome targets used for prioritization",
-      artifacts: [
-        {
-          id: "goal",
-          label: "Goal Definition",
-          filename: artifactFiles.goal,
-          description: "Goal metrics, baselines, and measurement method.",
-        },
-      ],
+      artifacts: [],
     },
-    introParagraphs: [
-      "The team committed to explicit outcome metrics before selecting scope. MVP Slice decisions were made against expected movement in service quality and operational efficiency.",
-    ],
+    introParagraphs: [],
+    goalStatement:
+      "Within 6 months, improve SaaS customer support efficiency by enabling agents to resolve common questions in under 30 seconds using citation-backed AI assistance — targeting a 35% reduction in Average Handle Time and a 15% increase in First Contact Resolution.",
     kpis: [
       {
         metric: "Average Handle Time (AHT)",
-        target: "30-40% reduction",
+        target: "35% reduction",
         directionLabel: "Reduction Target",
         rationale: "Lower search overhead and faster response composition.",
       },
       {
         metric: "First Contact Resolution (FCR)",
-        target: "10-20% increase",
+        target: "15% increase",
         directionLabel: "Increase Target",
         rationale: "Higher answer confidence and quality at first response.",
       },
-      {
-        metric: "Reopen Rate",
-        target: "15% reduction",
-        directionLabel: "Reduction Target",
-        rationale: "More accurate answers with clearer contextual grounding.",
-      },
-      {
-        metric: "Agent Confidence Score",
-        target: "25% improvement",
-        directionLabel: "Improvement Target",
-        rationale: "Citation visibility and controllable AI assistance.",
-      },
     ],
     prioritizationNote:
-      "Prioritization favored work that moved AHT and FCR simultaneously while protecting quality through Acceptance Criteria. Lower-signal ideas were deferred until the initial MVP Slice validated core assumptions.",
+      "Backlog prioritization favored work expected to move AHT and FCR simultaneously while protecting answer quality through explicit Acceptance Criteria. Lower-signal ideas were deferred until the MVP validated core assumptions.",
   },
   personas: {
     header: {
@@ -286,17 +205,10 @@ export const caseStudyContent: CaseStudyContent = {
       sectionNumber: "03",
       title: "User Research and Personas",
       subtitle: "From assumptions to validated user models",
-      artifacts: [
-        {
-          id: "personas",
-          label: "Personas",
-          filename: artifactFiles.personas,
-          description: "Research-backed persona sheets and evidence summary.",
-        },
-      ],
+      artifacts: [],
     },
     introParagraphs: [
-      "Discovery started with assumptions and proto-personas, then evolved into validated personas through interviews and task analysis. Persona vs Proto-Persona clarity prevented premature certainty during planning.",
+      "Discovery began with proto-persona hypotheses and evolved into validated ones through 5 structured interviews and workflow walkthroughs with SaaS support professionals.",
     ],
     personas: [
       {
@@ -314,11 +226,11 @@ export const caseStudyContent: CaseStudyContent = {
         pains: [
           "Context switching across multiple knowledge sources.",
           "Conflicting guidance between docs and internal chat threads.",
-          "Uncertainty when AI output does not explain evidence.",
+          "Reduced trust when AI output lacks clear supporting evidence.",
         ],
         success: [
-          "Lower Average Handle Time (AHT) without reducing answer quality.",
-          "Higher First Contact Resolution (FCR) with fewer escalations.",
+          "Resolve tickets faster without sacrificing answer quality.",
+          "Higher First Contact Resolution with fewer escalations.",
         ],
       },
       {
@@ -340,7 +252,7 @@ export const caseStudyContent: CaseStudyContent = {
         ],
         success: [
           "Reduced Reopen Rate and clearer Traceability to backlog decisions.",
-          "Evidence that training effort maps to measurable team performance.",
+          "Clear linkage between process changes and measurable team performance.",
         ],
       },
     ],
@@ -356,34 +268,36 @@ export const caseStudyContent: CaseStudyContent = {
       sectionNumber: "04",
       title: "Assumptions and Risk Management",
       subtitle: "Validation strategy for uncertain decisions",
-      artifacts: [
-        {
-          id: "risks",
-          label: "Risk Register",
-          filename: artifactFiles.risks,
-          description: "Assumption log, risk scoring, and mitigation plan.",
-        },
-      ],
+      artifacts: [],
     },
     introParagraphs: [
-      "Assumptions vs Risks were tracked explicitly to avoid hidden decision debt. Each critical assumption had a validation method and success threshold before scale investment.",
+      "Assumptions and risks were tracked explicitly to avoid hidden decision debt. Each critical assumption included a defined validation method and measurable success threshold before scaling investment.",
     ],
     assumptions: [
       "Agents will adopt AI guidance when citations are transparent and verifiable.",
-      "Reducing search time will improve Average Handle Time (AHT) and First Contact Resolution (FCR).",
-      "Existing knowledge quality is sufficient for an initial MVP Slice with targeted curation.",
+      "Reducing search time is the primary lever for improving Average Handle Time (AHT) and First Contact Resolution (FCR).",
+      "Existing knowledge quality is sufficient to support reliable AI answers in an initial MVP slice with targeted curation.",
     ],
     riskNarrative: [
-      "If trust assumptions fail, adoption drops even when answer quality is technically strong.",
-      "If search is not the dominant bottleneck, expected metric movement will underperform and reprioritization is required.",
+      "If trust assumptions fail, adoption drops regardless of technical answer quality.",
+      "If search is not the dominant bottleneck, expected metric movement will underperform, requiring backlog reprioritization.",
     ],
-    criticalAssumption: {
-      title: "Critical Assumption: Agent Trust in AI Guidance",
-      validationMethod:
-        "Run moderated scenario testing with support agents and observe citation checks, override behavior, and confidence ratings after each task.",
-      successCriteria:
-        "At least 80% of participants report confidence in cited answers and fewer than 20% perform a redundant manual search before responding.",
-    },
+    criticalAssumptions: [
+      {
+        title: "Critical Assumption: Agent Trust in AI Guidance",
+        validationMethod:
+          "Run moderated scenario testing with support agents and observe citation checks, override behavior, and confidence ratings after each task.",
+        successCriteria:
+          "At least 80% of participants report confidence in cited answers and fewer than 20% perform a redundant manual search before responding.",
+      },
+      {
+        title: "Critical Assumption: Search Time Is the Primary Bottleneck",
+        validationMethod:
+          "Shadow agents and measure time spent on search versus response composition across common ticket types.",
+        successCriteria:
+          "Search activity accounts for more than 40% of handling time on common tickets.",
+      },
+    ],
   },
   journey: {
     header: {
@@ -391,23 +305,16 @@ export const caseStudyContent: CaseStudyContent = {
       sectionNumber: "05",
       title: "Core User Journey",
       subtitle: "Primary workflow from ticket intake to resolution",
-      artifacts: [
-        {
-          id: "journey",
-          label: "Journey Map",
-          filename: artifactFiles.journey,
-          description: "Detailed end-to-end journey map with pain points.",
-        },
-      ],
+      artifacts: [],
     },
     introParagraphs: [
-      "The journey model was used as the reference frame for User Story Mapping and Acceptance Criteria decisions.",
+      "This core journey served as the reference frame for Story Mapping and Acceptance Criteria decisions.",
     ],
     steps: [
       {
         title: "Ticket Received",
         description:
-          "Agent opens a customer ticket requiring domain knowledge retrieval.",
+          "Agent receives a customer ticket requiring domain knowledge.",
         icon: "ticket",
         accent: "blue",
       },
@@ -435,14 +342,14 @@ export const caseStudyContent: CaseStudyContent = {
       {
         title: "Respond",
         description:
-          "Agent adapts content to customer context and sends a final response.",
+          "Agent adapts the cited answer to the customer context and responds.",
         icon: "reply",
         accent: "green",
       },
       {
         title: "Resolve",
         description:
-          "Case is resolved with quality safeguards and metric tracking for Traceability.",
+          "Customer issue is resolved without escalation or follow-up.",
         icon: "check",
         accent: "accent",
       },
@@ -454,57 +361,13 @@ export const caseStudyContent: CaseStudyContent = {
       sectionNumber: "06",
       title: "Story Mapping and MVP Slice",
       subtitle: "Scope selection for highest learning value",
-      artifacts: [
-        {
-          id: "story-map",
-          label: "Story Map",
-          filename: artifactFiles.storyMap,
-          description:
-            "User Story Mapping board and release slicing decisions.",
-        },
-      ],
+      artifacts: [],
     },
     introParagraphs: [
-      "User Story Mapping was used to identify a coherent MVP Slice that tests trust and speed assumptions before expanding scope.",
+      "User Story Mapping was used to identify a coherent MVP Slice. The MVP slice was intentionally constrained to validate the Agent Trust and Search Bottleneck assumptions before expanding feature depth.",
     ],
-    focusLabel: "MVP Focus: trust and speed validation",
-    embed: {
-      title: "Story map board embed",
-      embedUrl: "",
-      fallbackUrl: "/artifacts/story-map.pdf",
-    },
-    activities: [
-      {
-        title: "Ask Question",
-        items: [
-          { label: "Natural language input", inMvp: true },
-          { label: "Query suggestions", inMvp: false },
-        ],
-      },
-      {
-        title: "Get Answer",
-        items: [
-          { label: "AI-generated response", inMvp: true },
-          { label: "Source citations", inMvp: true },
-        ],
-      },
-      {
-        title: "Verify",
-        items: [
-          { label: "Open source documents", inMvp: true },
-          { label: "Confidence rating", inMvp: false },
-        ],
-      },
-      {
-        title: "Use Answer",
-        items: [
-          { label: "Copy response into ticket tool", inMvp: true },
-          { label: "Answer history", inMvp: false },
-        ],
-      },
-    ],
-    legend:
-      "Highlighted items represent MVP Slice scope. Muted items are post-MVP backlog candidates.",
+    embedTitle: "Whimsical story map board",
+    embedUrl: "https://whimsical.com/embed/X2LmBjyKEA7Wfy1H47adJW",
   },
   userStories: {
     header: {

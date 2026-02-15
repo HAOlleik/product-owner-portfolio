@@ -73,22 +73,6 @@ export interface Persona {
   success: string[];
 }
 
-export interface StoryMapActivityItem {
-  label: string;
-  inMvp: boolean;
-}
-
-export interface StoryMapActivity {
-  title: string;
-  items: StoryMapActivityItem[];
-}
-
-export interface StoryMapEmbedConfig {
-  title: string;
-  embedUrl: string;
-  fallbackUrl: string;
-}
-
 export interface UserStory {
   id: string;
   persona: string;
@@ -135,6 +119,7 @@ export interface VisionContent extends SectionContent {
 }
 
 export interface GoalsContent extends SectionContent {
+  goalStatement: string;
   kpis: KpiCard[];
   prioritizationNote: string;
 }
@@ -147,11 +132,11 @@ export interface PersonasContent extends SectionContent {
 export interface RisksContent extends SectionContent {
   assumptions: string[];
   riskNarrative: string[];
-  criticalAssumption: {
+  criticalAssumptions: Array<{
     title: string;
     validationMethod: string;
     successCriteria: string;
-  };
+  }>;
 }
 
 export interface JourneyStep {
@@ -172,10 +157,8 @@ export interface JourneyContent extends SectionContent {
 }
 
 export interface StoryMapContent extends SectionContent {
-  focusLabel: string;
-  embed: StoryMapEmbedConfig;
-  activities: StoryMapActivity[];
-  legend: string;
+  embedTitle: string;
+  embedUrl: string;
 }
 
 export interface UserStoriesContent extends SectionContent {
@@ -215,7 +198,6 @@ export interface CaseStudyContent {
   navItems: NavItem[];
   hero: HeroContent;
   philosophy: PhilosophyContent;
-  structure: StructureContent;
   vision: VisionContent;
   goals: GoalsContent;
   personas: PersonasContent;

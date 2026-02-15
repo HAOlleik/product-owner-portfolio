@@ -59,33 +59,48 @@ export const RisksSection = ({
 
           <section>
             <h3 className={styles.groupTitle}>Risk Impact Analysis</h3>
-            <div className={styles.narrative}>
-              <RichText
-                sectionId={content.header.id}
-                renderWithGlossaryTerms={renderWithGlossaryTerms}
-                paragraphs={content.riskNarrative}
-              />
-            </div>
+            <ul className={styles.narrativeList}>
+              {content.riskNarrative.map((risk, index) => (
+                <li
+                  key={`${content.header.id}-risk-narrative-${index}`}
+                  className={styles.narrativeCard}
+                >
+                  <p className={styles.assumptionLabel}>Risk {index + 1}</p>
+                  <div className={styles.assumptionText}>
+                    <RichText
+                      sectionId={content.header.id}
+                      renderWithGlossaryTerms={renderWithGlossaryTerms}
+                      paragraphs={[risk]}
+                    />
+                  </div>
+                </li>
+              ))}
+            </ul>
           </section>
         </div>
 
-        <article className={styles.critical}>
-          <h3 className={styles.criticalTitle}>
-            {content.criticalAssumption.title}
-          </h3>
-          <p className={styles.criticalLabel}>Validation Method</p>
-          <RichText
-            sectionId={content.header.id}
-            renderWithGlossaryTerms={renderWithGlossaryTerms}
-            paragraphs={[content.criticalAssumption.validationMethod]}
-          />
-          <p className={styles.criticalLabel}>Success Criteria</p>
-          <RichText
-            sectionId={content.header.id}
-            renderWithGlossaryTerms={renderWithGlossaryTerms}
-            paragraphs={[content.criticalAssumption.successCriteria]}
-          />
-        </article>
+        <div className={styles.criticalList}>
+          {content.criticalAssumptions.map((assumption, index) => (
+            <article
+              key={`${content.header.id}-critical-assumption-${index}`}
+              className={styles.critical}
+            >
+              <h3 className={styles.criticalTitle}>{assumption.title}</h3>
+              <p className={styles.criticalLabel}>Validation Method</p>
+              <RichText
+                sectionId={content.header.id}
+                renderWithGlossaryTerms={renderWithGlossaryTerms}
+                paragraphs={[assumption.validationMethod]}
+              />
+              <p className={styles.criticalLabel}>Success Criteria</p>
+              <RichText
+                sectionId={content.header.id}
+                renderWithGlossaryTerms={renderWithGlossaryTerms}
+                paragraphs={[assumption.successCriteria]}
+              />
+            </article>
+          ))}
+        </div>
       </div>
     </SectionWrapper>
   );

@@ -3,20 +3,6 @@
   gap: 1.55rem;
 }
 
-.focusTag {
-  display: inline-flex;
-  align-items: center;
-  border: 1px solid rgba(20, 184, 166, 0.28);
-  border-radius: 999px;
-  background: rgba(20, 184, 166, 0.08);
-  color: #0f766e;
-  text-transform: uppercase;
-  letter-spacing: 0.08em;
-  font-size: 0.68rem;
-  font-weight: 700;
-  padding: 0.33rem 0.72rem;
-}
-
 .mapCard {
   border: 1px solid var(--color-border);
   border-radius: 12px;
@@ -26,99 +12,14 @@
 
 .embedFrame {
   width: 100%;
-  height: min(64vh, 560px);
-  border: 1px solid var(--color-border);
+  height: 450px;
+  border: none;
   border-radius: 10px;
   background: #ffffff;
-}
-
-.fallbackLink {
-  display: inline-block;
-  margin-top: 0.7rem;
-  color: var(--color-accent);
-  text-decoration: none;
-  font-size: 0.85rem;
-  font-weight: 600;
-}
-
-.fallbackLink:hover,
-.fallbackLink:focus-visible {
-  text-decoration: underline;
-}
-
-.grid {
-  display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 0.8rem;
-}
-
-.columnLabel {
-  margin: 0;
-  color: var(--color-primary);
-  font-size: 0.66rem;
-  text-transform: uppercase;
-  letter-spacing: 0.09em;
-  font-weight: 700;
-}
-
-.columnCard {
-  margin-top: 0.5rem;
-  border: 1px solid var(--color-border);
-  border-radius: 10px;
-  background: #ffffff;
-  padding: 0.8rem;
-}
-
-.columnTitle {
-  margin: 0;
-  color: var(--color-primary);
-  font-size: 0.9rem;
-}
-
-.itemList {
-  margin: 0.72rem 0 0;
-  padding: 0;
-  list-style: none;
-  display: grid;
-  gap: 0.45rem;
-}
-
-.item {
-  border: 1px solid;
-  border-radius: 8px;
-  padding: 0.35rem 0.48rem;
-  font-size: 0.78rem;
-  line-height: 1.45;
-}
-
-.itemMvp {
-  border-color: rgba(20, 184, 166, 0.45);
-  background: rgba(20, 184, 166, 0.09);
-  color: var(--color-primary);
-}
-
-.itemPost {
-  border-color: var(--color-border);
-  background: #f8fafc;
-  color: var(--color-secondary);
-}
-
-.legend {
-  margin: 0.72rem 0 0;
-  text-align: center;
-  color: var(--color-secondary);
-  font-size: 0.76rem;
-  font-style: italic;
-}
-
-@media (max-width: 1100px) {
-  .grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
 }
 
 @media (max-width: 640px) {
-  .grid {
-    grid-template-columns: 1fr;
+  .embedFrame {
+    height: 360px;
   }
 }
