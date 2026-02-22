@@ -3,6 +3,109 @@
   gap: 1.45rem;
 }
 
+.workflowSection {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.workflowHeader {
+  display: grid;
+  gap: 0.35rem;
+}
+
+.workflowTitle {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+}
+
+.workflowHint {
+  margin: 0;
+  color: var(--color-secondary);
+  font-size: 0.84rem;
+}
+
+.workflowScroller {
+  overflow-x: auto;
+  overflow-y: visible;
+  padding-top: 0.25rem;
+  padding-bottom: 0.25rem;
+  transform: rotateX(180deg);
+}
+
+.workflowGrid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(340px, 1fr));
+  min-width: max-content;
+  gap: 0.8rem;
+  align-items: start;
+  transform: rotateX(180deg);
+}
+
+.workflowColumn {
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: linear-gradient(180deg, #f8fafc 0%, #f1f5f9 100%);
+  padding: 0.65rem;
+  min-height: 220px;
+}
+
+.columnHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.5rem;
+}
+
+.columnTitle {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 0.82rem;
+  font-weight: 700;
+}
+
+.columnCount {
+  color: var(--color-secondary);
+  font-size: 0.68rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  font-weight: 700;
+}
+
+.columnCards {
+  margin-top: 0.7rem;
+  display: grid;
+  gap: 0.55rem;
+  min-width: 0;
+}
+
+.columnCards :global(blockquote) {
+  margin: 0;
+  width: 100%;
+  max-width: 100%;
+}
+
+.columnCards :global(iframe) {
+  display: block;
+  width: 100% !important;
+  max-width: 100% !important;
+  min-width: 0 !important;
+  border-radius: 10px;
+}
+
+.emptyState {
+  margin: 0.8rem 0 0;
+  border: 1px dashed rgba(100, 116, 139, 0.35);
+  border-radius: 10px;
+  background: rgba(255, 255, 255, 0.7);
+  color: var(--color-secondary);
+  font-size: 0.8rem;
+  line-height: 1.45;
+  padding: 0.75rem;
+}
+
 .grid {
   display: grid;
   grid-template-columns: repeat(2, minmax(0, 1fr));
@@ -43,5 +146,15 @@
 @media (max-width: 950px) {
   .grid {
     grid-template-columns: 1fr;
+  }
+
+  .workflowGrid {
+    grid-template-columns: repeat(4, minmax(340px, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .workflowGrid {
+    grid-template-columns: repeat(4, minmax(340px, 1fr));
   }
 }

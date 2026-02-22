@@ -1,18 +1,18 @@
 import type { CaseStudyContent } from "../types/caseStudy";
 
-const artifactFiles = {
-  vision: "vision.pdf",
-  visionBoard: "vision-board.pdf",
-  goal: "goal.pdf",
-  personas: "personas.pdf",
-  risks: "risks.pdf",
-  roles: "roles.pdf",
-  process: "process.pdf",
-  journey: "journey.pdf",
-  storyMap: "story-map.pdf",
-  userStories: "user-stories.pdf",
-  traceability: "traceability.pdf",
-};
+// const artifactFiles = {
+//   vision: "vision.pdf",
+//   visionBoard: "vision-board.pdf",
+//   goal: "goal.pdf",
+//   personas: "personas.pdf",
+//   risks: "risks.pdf",
+//   roles: "roles.pdf",
+//   process: "process.pdf",
+//   journey: "journey.pdf",
+//   storyMap: "story-map.pdf",
+//   userStories: "user-stories.pdf",
+//   traceability: "traceability.pdf",
+// };
 
 export const caseStudyContent: CaseStudyContent = {
   siteMeta: {
@@ -375,18 +375,69 @@ export const caseStudyContent: CaseStudyContent = {
       sectionNumber: "07",
       title: "User Stories",
       subtitle: "Backlog examples with Acceptance Criteria",
-      artifacts: [
-        {
-          id: "user-stories",
-          label: "User Stories",
-          filename: artifactFiles.userStories,
-          description:
-            "Story set with INVEST checks and acceptance boundaries.",
-        },
-      ],
+      artifacts: [],
     },
     introParagraphs: [
       "Stories are written to satisfy INVEST quality and include Acceptance Criteria that are behavior-focused and testable.",
+    ],
+    trelloColumns: [
+      {
+        id: "backlog",
+        title: "Backlog",
+        cardUrls: [
+          "https://trello.com/c/eve6xSMD/3-knowledge-source-admin-curation",
+          "https://trello.com/c/ZXgsNpmc/2-integrations-with-ticketing-systems",
+          "https://trello.com/c/XoBxDVbq/5-known-issue-detection-reuse",
+          "https://trello.com/c/h3oEQh53/12-outcome-measurement-snapshot",
+          "https://trello.com/c/doTIXmNs/6-multi-tenant-workspaces",
+          "https://trello.com/c/pRwMDOIR/7-enterprise-security-compliance",
+        ],
+      },
+      {
+        id: "mvp-slice",
+        title: "MVP Slice",
+        cardUrls: [
+          "https://trello.com/c/8VWXnxCx/8-authentication-roles",
+          "https://trello.com/c/gPjjHxsq/9-ticket-context-experience",
+          "https://trello.com/c/othXu99A/10-copilot-qa-citations",
+          "https://trello.com/c/P5uHHved/11-draft-human-control-and-resolution",
+          "https://trello.com/c/BzENsQQd/4-feedback-loop-quality-triage",
+          "https://trello.com/c/XzzAQh8T/26-handle-no-answer-found-safely",
+          "https://trello.com/c/k0T2Wii3/27-ask-follow-up-questions-threaded",
+          "https://trello.com/c/V3n1L2pW/28-regenerate-answer",
+          "https://trello.com/c/qaAKl6od/29-send-response-and-close-ticket",
+          "https://trello.com/c/0FnOSSzE/30-confirm-before-sending",
+          "https://trello.com/c/DimNt7JW/31-separate-internal-note-vs-customer-reply",
+          "https://trello.com/c/tEecrQ70/32-rate-copilot-answer-after-resolution",
+          "https://trello.com/c/C9BkZC63/33-flag-unsafe-incorrect-answer",
+        ],
+      },
+      {
+        id: "sprint-2",
+        title: "Sprint 2",
+        cardUrls: [
+          "https://trello.com/c/V9XH2OVT/13-login-as-support-agent",
+          "https://trello.com/c/BlyOwU5T/25-role-based-access-agent-vs-admin",
+          "https://trello.com/c/pi1cWBCP/14-ask-the-copilot-for-an-answer-free-text",
+          "https://trello.com/c/LbsyXkS2/15-show-citations-and-open-source-without-losing-draft-context",
+          "https://trello.com/c/crwGvm34/16-insert-ai-answer-into-draft-and-edit",
+        ],
+      },
+      {
+        id: "done",
+        title: "Done",
+        cardUrls: [
+          "https://trello.com/c/KdemXZrA/1-platform-infra-baseline",
+          "https://trello.com/c/XNHHRTpK/17-repo-ci-pipeline",
+          "https://trello.com/c/i2gzhyJx/18-staging-deployment",
+          "https://trello.com/c/qqBkFRZ9/19-initial-data-model-seed",
+          "https://trello.com/c/88wdJwMP/20-basic-observability",
+          "https://trello.com/c/NUP7sa9x/21-ticket-context-prototype",
+          "https://trello.com/c/oGdSGw6U/22-view-assigned-tickets",
+          "https://trello.com/c/4zOYvL3f/23-open-ticket-details",
+          "https://trello.com/c/tvuFpXP8/24-identify-known-issue-manual-check",
+        ],
+      },
     ],
     stories: [
       {
@@ -430,14 +481,7 @@ export const caseStudyContent: CaseStudyContent = {
       sectionNumber: "08",
       title: "Traceability Matrix",
       subtitle: "Goal to backlog to outcome linkage",
-      artifacts: [
-        {
-          id: "traceability",
-          label: "Traceability Matrix",
-          filename: artifactFiles.traceability,
-          description: "Goal-backlog-metric linkage used for governance.",
-        },
-      ],
+      artifacts: [],
     },
     introParagraphs: [
       "Traceability was used to challenge low-value requests and keep scope connected to measurable outcomes.",

@@ -1,3 +1,5 @@
+import { useEffect } from "react";
+
 import type { ArtifactRef, UserStoriesContent } from "../../types/caseStudy";
 import { useGlossaryRenderer } from "../../hooks/useGlossaryRenderer";
 
@@ -16,6 +18,29 @@ export const UserStoriesSection = ({
   onOpenArtifact,
 }: UserStoriesSectionProps): React.ReactElement => {
   const { renderWithGlossaryTerms } = useGlossaryRenderer();
+  const hasTrelloCardEmbeds = content.trelloColumns?.some(
+    (column) => (column.cardUrls?.length ?? 0) > 0,
+  );
+
+  useEffect(() => {
+    if (!hasTrelloCardEmbeds) {
+      return;
+    }
+
+    const scriptSrc = "https://p.trellocdn.com/embed.min.js";
+    const existingScript = document.querySelector<HTMLScriptElement>(
+      `script[src="${scriptSrc}"]`,
+    );
+
+    if (existingScript) {
+      return;
+    }
+
+    const script = document.createElement("script");
+    script.src = scriptSrc;
+    script.async = true;
+    document.body.appendChild(script);
+  }, [hasTrelloCardEmbeds]);
 
   return (
     <SectionWrapper
@@ -33,26 +58,46 @@ export const UserStoriesSection = ({
           paragraphs={content.introParagraphs}
         />
 
-        <div className={styles.grid}>
-          {content.stories.map((story) => (
-            <article key={story.id} className={styles.card}>
-              <p className={styles.persona}>As a {story.persona}</p>
-              <div className={styles.story}>
-                <RichText
-                  sectionId={content.header.id}
-                  renderWithGlossaryTerms={renderWithGlossaryTerms}
-                  paragraphs={[story.statement]}
-                />
+        {content.trelloColumns?.length ? (
+          <section className={styles.workflowSection}>
+
+            <div className={styles.workflowScroller}>
+              <div className={styles.workflowGrid}>
+                {content.trelloColumns.map((column) => {
+                  const cardUrls = column.cardUrls ?? [];
+
+                  return (
+                    <article key={column.id} className={styles.workflowColumn}>
+                      <div className={styles.columnHeader}>
+                        <h4 className={styles.columnTitle}>{column.title}</h4>
+                        <span className={styles.columnCount}>
+                          {cardUrls.length} card{cardUrls.length === 1 ? "" : "s"}
+                        </span>
+                      </div>
+
+                      {cardUrls.length > 0 ? (
+                        <div className={styles.columnCards}>
+                          {cardUrls.map((cardUrl) => (
+                            <blockquote
+                              key={`${column.id}-${cardUrl}`}
+                              className="trello-card"
+                            >
+                              <a href={cardUrl}>Trello Card</a>
+                            </blockquote>
+                          ))}
+                        </div>
+                      ) : (
+                        <p className={styles.emptyState}>
+                          Add Trello card links here later.
+                        </p>
+                      )}
+                    </article>
+                  );
+                })}
               </div>
-              <h3 className={styles.criteriaTitle}>Acceptance Criteria</h3>
-              <RichText
-                sectionId={content.header.id}
-                renderWithGlossaryTerms={renderWithGlossaryTerms}
-                bullets={story.acceptanceCriteria}
-              />
-            </article>
-          ))}
-        </div>
+            </div>
+          </section>
+        ) : null}
       </div>
     </SectionWrapper>
   );

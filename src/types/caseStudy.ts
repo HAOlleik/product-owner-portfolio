@@ -80,6 +80,12 @@ export interface UserStory {
   acceptanceCriteria: string[];
 }
 
+export interface TrelloWorkflowColumn {
+  id: string;
+  title: string;
+  cardUrls?: string[];
+}
+
 export interface TraceabilityRow {
   productGoal: string;
   backlogItem: string;
@@ -163,6 +169,7 @@ export interface StoryMapContent extends SectionContent {
 
 export interface UserStoriesContent extends SectionContent {
   stories: UserStory[];
+  trelloColumns?: TrelloWorkflowColumn[];
 }
 
 export interface TraceabilityContent extends SectionContent {
