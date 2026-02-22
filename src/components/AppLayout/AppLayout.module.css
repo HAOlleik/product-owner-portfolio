@@ -41,6 +41,33 @@
   gap: 1rem;
 }
 
+.headerActions {
+  margin-left: auto;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.55rem;
+}
+
+.headerAction {
+  appearance: none;
+  border: 1px solid var(--color-border);
+  background: #ffffff;
+  color: var(--color-primary);
+  border-radius: 999px;
+  padding: 0.45rem 0.85rem;
+  font-size: 0.83rem;
+  font-weight: 600;
+  text-decoration: none;
+  line-height: 1;
+  cursor: pointer;
+}
+
+.headerAction:hover,
+.headerAction:focus-visible {
+  border-color: rgba(20, 184, 166, 0.35);
+  background: #f8fafc;
+}
+
 .brand {
   display: inline-flex;
   align-items: center;
@@ -81,6 +108,90 @@
   padding-left: var(--side-nav-width);
 }
 
+.contactOverlay {
+  position: fixed;
+  inset: 0;
+  z-index: 250;
+  background: rgba(15, 23, 42, 0.35);
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+}
+
+.contactDialog {
+  width: min(100%, 520px);
+  border: 1px solid var(--color-border);
+  border-radius: 16px;
+  background: #ffffff;
+  box-shadow: 0 20px 60px rgba(15, 23, 42, 0.2);
+  padding: 1rem;
+}
+
+.contactHeader {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.contactTitle {
+  margin: 0;
+  color: var(--color-primary);
+  font-size: 1rem;
+}
+
+.contactClose {
+  appearance: none;
+  border: 1px solid var(--color-border);
+  border-radius: 999px;
+  background: #ffffff;
+  color: var(--color-primary);
+  padding: 0.38rem 0.7rem;
+  font-size: 0.8rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+.contactClose:hover,
+.contactClose:focus-visible {
+  background: #f8fafc;
+}
+
+.contactDetails {
+  margin-top: 0.9rem;
+  display: grid;
+  gap: 0.75rem;
+}
+
+.contactRow {
+  margin: 0;
+  display: grid;
+  gap: 0.25rem;
+  border: 1px solid var(--color-border);
+  border-radius: 12px;
+  background: #f8fafc;
+  padding: 0.75rem;
+}
+
+.contactLabel {
+  color: var(--color-secondary);
+  font-size: 0.72rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  font-weight: 700;
+}
+
+.contactLink {
+  color: var(--color-accent);
+  text-decoration: none;
+  word-break: break-word;
+}
+
+.contactLink:hover,
+.contactLink:focus-visible {
+  text-decoration: underline;
+}
+
 @media (max-width: 1023px) {
   .main {
     padding-top: calc(var(--header-height) + var(--mobile-nav-height));
@@ -92,5 +203,16 @@
 
   .headerMeta {
     display: none;
+  }
+}
+
+@media (max-width: 640px) {
+  .headerActions {
+    gap: 0.4rem;
+  }
+
+  .headerAction {
+    padding: 0.4rem 0.7rem;
+    font-size: 0.78rem;
   }
 }
